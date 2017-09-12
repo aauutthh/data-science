@@ -1,0 +1,28 @@
+# answers.txt
+# CMPT 318 Exercise 1 - answers.txt
+# Alex Macdonald
+# ID#301272281
+# September 11, 2018
+
+1. Where you did the same calculations with NumPy and Pandas, 
+which did you find easier to work with? 
+Which code do you think is easier to read?
+
+I personally found NumPy to be a bit easier to work with, mainly because of the better documentation.
+Pandas has okay documentation, but NumPy provides examples and a more detailed set of arguments/constraints.
+Overall, I liked how the functions were basically the same between them, and going from NumPy -> Pandas was seamless.
+In terms of readability, Pandas is better because of the way it can take in document headers to deliver more human readible output.
+
+2. What were the running times of the two pivot_months_* functions? 
+How can you explain the difference?
+
+The Pandas method resulted in:
+10 loops, best of 3: 18.6 ms per loop
+
+The loop method resulted in:
+1 loop, best of 3: 536 ms per loop
+
+The pandas method executed ~29% times faster than the loops method.
+This is likely due to not having to iterate over all rows/columns of the information, also Pandas has better array management (C-style) 
+instead of the Python pointer-based arrays. This allows manipulation of the arrays in Pandas to be more efficient and specialized, and
+frankly it's a tool designed for data manipulation, so it would be sad if brute forcing data was comparable in terms of speed.

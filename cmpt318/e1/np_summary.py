@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 # np_summary.py
-# CMPT 318 Exercise 1
+# CMPT 318 Exercise 1 - Getting Started with NumPy
 # Alex Macdonald
 # ID#301272281
 # September 11, 2018
