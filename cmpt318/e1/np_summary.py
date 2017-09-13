@@ -23,8 +23,8 @@ counts = data['counts']
 # Print the row number.
 cityTotals = totals.sum(axis=1)
 lowestPrecip = np.argmin(cityTotals)
-print "Row with lowest total preciptiation:"
-print lowestPrecip
+print ("Row with lowest total preciptiation:")
+print (lowestPrecip)
 
 # Determine the average precipitation in these locations for each month. 
 # That will be the total precipitation for each month (axis 0), divided by the total observations for that months. 
@@ -32,15 +32,15 @@ print lowestPrecip
 monthlyTotals = totals.sum(axis=0)
 monthlyCounts = counts.sum(axis=0)
 avgMonthPrecip = np.divide(monthlyTotals, monthlyCounts, dtype=float)
-print "Average precipitation in each month:"
-print avgMonthPrecip
+print ("Average precipitation in each month:")
+print (avgMonthPrecip)
 
 # Do the same for the cities: 
 # give the average daily precipitation for each city by printing the array.
 cityCounts = counts.sum(axis=1)
 avgCityPrecip = np.divide(cityTotals, cityCounts, dtype=float)
-print "Average precipitation in each city:"
-print avgCityPrecip
+print ("Average precipitation in each city:")
+print (avgCityPrecip)
 
 # Calculate the total precipitation for each quarter in each city 
 # (i.e. the totals for each station across three-month groups). 
@@ -51,5 +51,5 @@ n = np.shape(totals)[0]
 reshaped = totals.reshape(4*n, 3)
 reshaped_sum = reshaped.sum(axis=1)
 quarterlyPrecipTotals = reshaped_sum.reshape(n, 4)
-print "Quarterly precipitation totals:"
-print quarterlyPrecipTotals
+print ("Quarterly precipitation totals:")
+print (quarterlyPrecipTotals)

@@ -20,9 +20,9 @@ counts = pd.read_csv('counts.csv').set_index(keys=['name'])
 # Print the row number.
 cityTotals = totals.sum(axis=1)
 lowestPrecip = cityTotals.idxmin()
-print "Row with lowest total preciptiation:"
+print ("Row with lowest total preciptiation:")
 # print lowestPrecip # More human readible output
-print totals.index.get_loc(lowestPrecip) # Similar to the NumPy output
+print (totals.index.get_loc(lowestPrecip)) # Similar to the NumPy output
 
 
 # Determine the average precipitation in these locations for each month. 
@@ -31,14 +31,14 @@ print totals.index.get_loc(lowestPrecip) # Similar to the NumPy output
 monthlyTotals = totals.sum(axis=0)
 monthlyCounts = counts.sum(axis=0)
 avgMonthlyPrecip = monthlyTotals.div(monthlyCounts)
-print "Average precipitation in each month:"
+print ("Average precipitation in each month:")
 # print avgMonthlyPrecip # More human readible output
-print avgMonthlyPrecip.values # Similar to the NumPy output
+print (avgMonthlyPrecip.values) # Similar to the NumPy output
 
 # Do the same for the cities: 
 # give the average daily precipitation for each city by printing the array.
 cityCounts = counts.sum(axis=1)
 avgCityPrecip = cityTotals.div(cityCounts)
-print "Average precipitation in each city:"
+print ("Average precipitation in each city:")
 # print avgCityPrecip # More human readible output
-print avgCityPrecip.values # Similar to the NumPy output
+print (avgCityPrecip.values) # Similar to the NumPy output
