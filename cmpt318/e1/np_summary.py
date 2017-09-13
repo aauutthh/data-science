@@ -31,14 +31,14 @@ print (lowestPrecip)
 # Print the resulting array.
 monthlyTotals = totals.sum(axis=0)
 monthlyCounts = counts.sum(axis=0)
-avgMonthPrecip = np.divide(monthlyTotals, monthlyCounts, dtype=float)
+avgMonthPrecip = np.divide(monthlyTotals, monthlyCounts)
 print ("Average precipitation in each month:")
 print (avgMonthPrecip)
 
 # Do the same for the cities: 
 # give the average daily precipitation for each city by printing the array.
 cityCounts = counts.sum(axis=1)
-avgCityPrecip = np.divide(cityTotals, cityCounts, dtype=float)
+avgCityPrecip = np.divide(cityTotals, cityCounts)
 print ("Average precipitation in each city:")
 print (avgCityPrecip)
 
