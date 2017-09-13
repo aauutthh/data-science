@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/python3
 
 # pd_summary.py
 # CMPT 318 Exercise 1 - Getting Started with Pandas

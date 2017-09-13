@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/python3
 
 # np_summary.py
 # CMPT 318 Exercise 1 - Getting Started with NumPy
