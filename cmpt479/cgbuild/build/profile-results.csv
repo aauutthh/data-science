@@ -1,0 +1,5 @@
+foo: 6
+llvm.dbg.declare: 41
+printf: 6
+bar: 22
+main: 1
