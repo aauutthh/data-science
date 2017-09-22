@@ -13,13 +13,15 @@ import matplotlib.pyplot as plt
 filename1 = sys.argv[1]
 filename2 = sys.argv[2]
 
-data1 = pd.read_table(filename1, sep=' ', header=None, index_col=1, names=['lang', 'page', 'views', 'bytes'])
-data2 = pd.read_table(filename2, sep=' ', header=None, index_col=1, names=['lang', 'page', 'views', 'bytes'])
+data1 = pd.read_table(filename1, sep=' ', header=None, names=['lang', 'page', 'views', 'bytes'])
+data2 = pd.read_table(filename2, sep=' ', header=None, names=['lang', 'page', 'views', 'bytes'])
 
 # Plot 1: Distribution of Views
 # > We will use only the first data set
 # > Using only the first input file, sort the data by the number of views (decreasing)
 #   HINT: sort_values
+data1Sorted = data1.sort_values('views', 0, ascending=False)
+
 # > If you give plt.plot a single data set, it will be plotted against a 0 to n-1 range,
 #   which is what we want.
 # > BUT, if we give matplotlib a Pandas series (e.g., data['views']) it will try to
@@ -28,10 +30,10 @@ data2 = pd.read_table(filename2, sep=' ', header=None, index_col=1, names=['lang
 # > > 2. Create a range to explicitly use as the x-coordinates (with np.arrange)
 plt.figure(figsize=(10, 5)) # change the size to something sensible
 plt.subplot(1, 2, 1) # subplots in 1 row, 2 columns, select the first
-plt.plot(data1['views'].values)
 plt.xlabel('Rank')
 plt.ylabel('Views')
 plt.title('Popularity Distribution')
+plt.plot(data1Sorted['views'].values)
 
 # Plot 2: Daily Views
 # > The files contain space-separated values for the language, page name, number of
@@ -45,13 +47,15 @@ plt.title('Popularity Distribution')
 # > Because of the distribution of values, the linear axes don't make much sense, change
 #   this plot to log-scale on both axes using plt.xscale and plt.yscale
 
+merged = pd.merge(data1, data2, on=['page'])
+
 plt.subplot(1, 2, 2) # ... and then select the second
-plt.plot(data2['views'].values)
-plt.xscale('log')
-plt.yscale('log')
+plt.title('Daily Correlation')
 plt.xlabel('Day 1 views')
 plt.ylabel('Day 2 views')
-plt.title('Daily Correlation')
+plt.xscale('log')
+plt.yscale('log')
+plt.scatter(merged['views_x'], merged['views_y'])
 
 # Final Output
 # > Can use plt.show() to see the figure as the program runs
@@ -59,5 +63,6 @@ plt.title('Daily Correlation')
 # > Instead, create a PNG file called wikipedia.png
 # > Use the functions plt.title, plt.xlabel, and plt.ylabel to give some useful
 #   labels to the plots. A sample wikipedia.png is included in the ZIP file.
-# plt.savefig('wikipedia.png')
-plt.show()
+
+# plt.show()
+plt.savefig('wikipedia1.png')
