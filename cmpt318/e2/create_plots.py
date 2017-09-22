@@ -65,4 +65,4 @@ plt.scatter(merged['views_x'], merged['views_y'])
 #   labels to the plots. A sample wikipedia.png is included in the ZIP file.
 
 # plt.show()
-plt.savefig('wikipedia1.png')
+plt.savefig('wikipedia.png')

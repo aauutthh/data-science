@@ -1,0 +1,24 @@
+CMPT318 - Exercise 2
+Alex Macdonald
+ID#301272281 
+September 22, 2017
+
+1. In the hint above, describe the values that are the result of data['timestamp']*fit.slope + fit.intercept? 
+How is this calculated?
+
+> The result is a linear regression line, with the form of y = mx + b where
+> m is the slope (fit.slope)
+> b is the intercept (fit.intercept)
+> and x is our independant variable (timestamp in this case)
+> This creates a line of a predicted value for y (rating), based on each value of x (timestamp)
+
+
+2. In the same hint, why does this produce a fit line on the graph? 
+Why are the created_at values and timestamp values paired correctly to make points on the plot?
+
+> This creates a fit line because it follows the y=mx+b equation for a straight line graph (as mentioned in #1)
+> It uses the timestamp values as a dependent variable to approximate the rating for any given timestamp
+> The created_at values were in datetime format, which is great for human readability
+> > However, datetime isn't convenient for data transformation, because there are too many states the date could be in (month/day/year/etc.)
+> > To simplify this, convert the date to a timestamp, s.t. all dates can be the same format; a number
+> > > And these numbers increase in value as time progresses, so it's easy to compare the date amongst the timestamp data
