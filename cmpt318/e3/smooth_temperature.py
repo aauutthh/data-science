@@ -26,7 +26,6 @@ data = pd.read_table(file, sep=',', header=0)
 data['timestamp'] = pd.to_datetime(data['timestamp'])
 # And then back into a timestamp format.
 data['timestamp'] = data['timestamp'].apply(to_timestamp)
-# TODO Convert into a nice format like hour:min for readibility
 
 # LOESS Smoothing
 frac = 0.15 # looks like a pretty good value to choose
@@ -35,17 +34,17 @@ lowess_smoothed = sm.nonparametric.lowess(data['temperature'].values, data['time
 # Kalman Smoothing
 kalman_data = data[['temperature', 'cpu_percent', 'sys_load_1']]
 initial_state = kalman_data.iloc[0]
-observation_covariance = np.diag([0, 0, 0]) ** 2 # TODO: shouldn't be zero
-transition_covariance = np.diag([0, 0, 0]) ** 2 # TODO: shouldn't be zero
-transition = [[0, 0, 0], [0, 0, 0], [0, 0, 0]] # TODO: shouldn't (all) be zero
-kf = KalmanFilter(transition_covariance, observation_covariance,)
+observation_covariance = np.diag([1, 1, 1]) ** 2 # TODO: shouldn't be zero - this matrix is the std. dev
+transition_covariance = np.diag([1, 1, 1]) ** 2 # TODO: shouldn't be zero - confidence matrix
+transition = [[1, 0, -0.27], [0, 0.85, -1.14], [0, 0.06, 0.37]]
+kf = KalmanFilter(transition_covariance, observation_covariance)
 kalman_smoothed, _ = kf.smooth(kalman_data)
 
 # Prepare the chart, and write to file
 plt.figure(figsize=(12, 4))
 plt.plot(data['timestamp'], data['temperature'], 'b.', alpha=0.5)
+plt.plot(data['timestamp'], kalman_smoothed[:, 0], 'g-')
 plt.plot(data['timestamp'], lowess_smoothed[:, 1], 'r-')
-# plt.plot(data['timestamp'], kalman_smoothed[:, 0], 'g-')
 plt.title('Daily Correlation')
 plt.xlabel('Timestamp')
 plt.ylabel('Temperature')
