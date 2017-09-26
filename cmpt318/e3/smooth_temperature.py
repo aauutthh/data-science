@@ -38,7 +38,7 @@ initial_state = kalman_data.iloc[0]
 observation_covariance = np.diag([0, 0, 0]) ** 2 # TODO: shouldn't be zero
 transition_covariance = np.diag([0, 0, 0]) ** 2 # TODO: shouldn't be zero
 transition = [[0, 0, 0], [0, 0, 0], [0, 0, 0]] # TODO: shouldn't (all) be zero
-kf = KalmanFilter()
+kf = KalmanFilter(transition_covariance, observation_covariance,)
 kalman_smoothed, _ = kf.smooth(kalman_data)
 
 # Prepare the chart, and write to file
