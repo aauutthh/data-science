@@ -6,7 +6,12 @@ September 29, 2017
 1. When smoothing the CPU temperature, do you think you got a better result with LOESS or Kalman smoothing? 
 What differences did you notice?
 
+I think that Kalman Smoothing gave a better representation of what the data looked like in a particular time frame, and overall retained the details of the original data set better.
+I think LOESS did a nice job of displaying the trend over time, which may be useful in some instances. For example, if running tasks on my own computer, I would expect my computer wouldn't catch fire. So, a general LOESS might be a good representation of what the temperature trends were during the duration of my task. However, if something did go wrong and my computer started to overheat and catch fire, Kalman Smoothing would retain the details of what happened around that time frame, and would be a better representation of what happened in the moment.
+
 2. In the GPX files, you might have also noticed other data about the observations: 
 time stamp, course (heading in degrees from north, 0–360), speed (in m/s). 
 How could those have been used to make a better prediction about the “next” latitude and longitude? 
 [Aside: I tried, and it didn't help much. I think the values are calculated from the latitude/longitude by the app: they don't really add much new information.]
+
+These values are useful in predicting where the individual is going, and how quickly they'll get there. This information, we would be able to calculate velocity and acceleration, and calculate details not just about speed, but about how fast their speed is changing. These metrics would also be useful for prediction because velocity allows us to get a better idea of direction travelled. Pair this with accelration, and we can estimate how fast the individual will get to a destination. Additionally, any additional information that can get about the displacement and acceleration can be used to verify the error that we put into the Kalman filters, and we can narrow it down to get a better smoothing.

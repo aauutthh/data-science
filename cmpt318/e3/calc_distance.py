@@ -10,8 +10,6 @@ import sys
 from pykalman import KalmanFilter
 import numpy as np
 import pandas as pd
-import statsmodels.api as sm
-import matplotlib.pyplot as plt
 from xml.dom.minidom import parse, parseString
 
 # Read the XML
@@ -28,21 +26,22 @@ def read_gpx(file):
     longitude.append(node.getAttribute('lon'))
 
   # Shove it all into a dataframe
-  df = pd.DataFrame({
-    'latitude': latitude,
-    'longitude': longitude
+  points = pd.DataFrame({
+    'lat': latitude,
+    'lon': longitude
   })
 
   # Make sure that the information is in float data type
-  df['latitude'] = df['latitude'].astype('float')
-  df['longitude'] = df['longitude'].astype('float')
-  return df
+  points['lat'] = points['lat'].astype('float')
+  points['lon'] = points['lon'].astype('float')
+  return points
 
 def distance(df):
-  df['latitude_adjacent'] = df.latitude.shift(-1)
-  df['longitude_adjacent'] = df.longitude.shift(-1)
-  df['distance'] = haversine(df['latitude'], df['longitude'], df['latitude_adjacent'], df['longitude_adjacent'])
-  return df['distance'].sum()
+  points = df.copy(deep=True)
+  points['lat_adjacent'] = points.lat.shift(-1)
+  points['lon_adjacent'] = points.lon.shift(-1)
+  points['distance'] = haversine(points['lat'], points['lon'], points['lat_adjacent'], points['lon_adjacent'])
+  return points['distance'].sum()
   
 # Code For the Haversine Function borrowed from:
 # https://stackoverflow.com/questions/27928/calculate-distance-between-two-latitude-longitude-points-haversine-formula/21623206
@@ -55,6 +54,32 @@ def haversine(lat1, long1, lat2, long2):
   c = 2 * np.arctan2(np.sqrt(a), np.sqrt(1-a))
   d = EARTH_RADIUS * c
   return d * 1000
+
+def smooth(df):
+  points = df.copy(deep=True)
+
+  # the first data point is a good guess of where the walk started
+  initial_state = points.iloc[0]
+
+  # One degree of latitude is about 10^5 meters - close enough for calculating error
+  # observation_covariance: phone is accurate to 15 to 20 meters
+  observation_covariance = np.diag([20/10000, 20/10000]) ** 2
+  
+  # transition_matrices: current position will be the same as previous position
+  transition_matrix = np.diag([1, 1])
+
+  # transition_covariance: ggbaker walks at 1m/s, and the data contains an observation ~every 10 s
+  transition_covariance = np.diag([10/10000, 10/10000]) ** 2
+  
+  kf = KalmanFilter(
+    transition_matrices=transition_matrix,
+    transition_covariance=transition_covariance,
+    observation_covariance=observation_covariance,
+    initial_state_mean=initial_state
+  )
+  kf_smoothed, _ = kf.smooth(points)
+  kf_df = pd.DataFrame(kf_smoothed, columns=['lat', 'lon'])
+  return kf_df
 
 # Borrowed code from calc_distance_hint.py
 def output_gpx(points, output_filename):
@@ -84,9 +109,9 @@ def main():
     points = read_gpx(sys.argv[1])
     print('Unfiltered distance: %0.2f' % (distance(points)))
     
-    # smoothed_points = smooth(points)
-    # print('Filtered distance: %0.2f' % (distance(smoothed_points),))
-    # output_gpx(smoothed_points, 'out.gpx')
+    smoothed_points = smooth(points)
+    print('Filtered distance: %0.2f' % (distance(smoothed_points)))
+    output_gpx(smoothed_points, 'out.gpx')
 
 
 if __name__ == '__main__':
