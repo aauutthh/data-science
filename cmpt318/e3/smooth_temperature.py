@@ -34,8 +34,11 @@ lowess_smoothed = sm.nonparametric.lowess(data['temperature'].values, data['time
 # Kalman Smoothing
 kalman_data = data[['temperature', 'cpu_percent', 'sys_load_1']]
 initial_state = kalman_data.iloc[0]
-observation_covariance = np.diag([1, 1, 1]) ** 2 # TODO: shouldn't be zero - this matrix is the std. dev
-transition_covariance = np.diag([1, 1, 1]) ** 2 # TODO: shouldn't be zero - confidence matrix
+
+# Figure out the standard deviation for the datasets
+
+observation_covariance = np.diag([1, 1, 1]) ** 2
+transition_covariance = np.diag([1, 1, 1]) ** 2
 transition = [[1, 0, -0.27], [0, 0.85, -1.14], [0, 0.06, 0.37]]
 kf = KalmanFilter(transition_covariance, observation_covariance)
 kalman_smoothed, _ = kf.smooth(kalman_data)
@@ -48,5 +51,6 @@ plt.plot(data['timestamp'], lowess_smoothed[:, 1], 'r-')
 plt.title('Daily Correlation')
 plt.xlabel('Timestamp')
 plt.ylabel('Temperature')
+plt.legend();
 plt.show()
 # plt.savefig('cpu.svg')
