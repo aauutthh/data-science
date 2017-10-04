@@ -1,0 +1,11 @@
+CMPT318 - Exercise 4
+Alex Macdonald
+ID#301272281 
+October 6, 2017
+
+1. Based on your results for the last question, do you think daily temperatures are a good way to predict population density? 
+Briefly explain why or why not.
+
+2. The larger data file (stations.json.gz) was kept compressed throughout the analysis. 
+Constantly decompressing the data seems inefficient. 
+Why might this be faster than working with the uncompressed .json data?
