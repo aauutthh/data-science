@@ -34,11 +34,11 @@ df_ratings = pd.DataFrame(ratings, columns=["all"])
 df_ratings.drop(df_ratings["all"].index[[0]], inplace=True)
 
 # Regex out the movie titles into a column
-df_ratings['title'] = df_ratings['all'].str.extract('(.*?),\d\d?$', expand=True)
+df_ratings['title'] = df_ratings['all'].str.extract('(.*?),\d\.?\d?$', expand=True)
 
 # Regex out the movie ratings into a column
-df_ratings['rating'] = df_ratings['all'].str.extract('.*?,(\d\d?)$', expand=True)
-df_ratings['rating'] = df_ratings['rating'].astype('int')
+df_ratings['rating'] = df_ratings['all'].str.extract('.*?,(\d\.?\d?)$', expand=True)
+df_ratings['rating'] = df_ratings['rating'].astype('float')
 
 # Remove the column that contained a monolithic dump of the data
 df_ratings.drop('all', axis=1, inplace=True)

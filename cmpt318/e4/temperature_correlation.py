@@ -19,8 +19,9 @@ output_file = sys.argv[3] # svg
 station_fh = gzip.open(stations_filename, 'rt', encoding='utf-8')
 stations = pd.read_json(station_fh, lines=True)
 
-# Produce a scatterplot of average maximum temperature against population Density
 
+
+# Produce a scatterplot of average maximum temperature against population Density
 plt.figure(figsize=(1, 1))
 plt.xlabel('Avg Max Temperature (\u00b0C)')
 plt.ylabel('Population Density (people/km\u00b2)')
