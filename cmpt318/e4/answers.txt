@@ -5,7 +5,14 @@ October 6, 2017
 
 1. Based on your results for the last question, do you think daily temperatures are a good way to predict population density? 
 Briefly explain why or why not.
+> Initially, I thought no. Because population density can depend on many factors, temperature being a vague one because looking at the scatterplot, most of the world lives in areas with temperatures between 15 and 25 degrees.
+> Then I thought about that, and figured yeah you can use it to estimate where people may live. Because we can limit the outgroups. We can say that people don'nt usually live in places with less than 10 degrees, or greater than 30 degrees average temperature.
+> It depends on the question being asked. If the question is, based on the temperature data, can you predict where they're from? Then no, we cannot because the majority of the world fits between 10 degrees.
+> If the question is can you predict if people live in an area with a given average temperature? Then yeah, we could say people don't like living where it's too hot or too cold.
 
 2. The larger data file (stations.json.gz) was kept compressed throughout the analysis. 
 Constantly decompressing the data seems inefficient. 
 Why might this be faster than working with the uncompressed .json data?
+> Because it minimizes the amount of 'space' we have to traverse with our expensive scanning algorithms
+> For example, when compressed, the stations.json.gz is 256K. Uncompressed, it's 571K (did this by writing the df to a csv).
+> Based on this, compression reduces its size in half, and thus reduces the amount of traversal required to scan from one end of the file to the other in half.
