@@ -4,17 +4,17 @@ ID#301272281
 October 13, 2017
 
 1. Which of the four transforms suggested got you the closest to satisfying the assumptions of a T-test?
-> 
+> The np.log() did the best job of normalizing the data, and got the closest conditions to satisfying a t-test.
 
 2. I gave imprecise English translations of what the by-week test, and the Mann-Whitney test were actually testing. 
    Do the same for the original T-test, and for the transformed data T-test. 
    That is, describe what the conclusion would be if you could reject the null hypothesis in those tests.
-> 
+> If we reject "it's not equally-likely that the larger number comments occur on weekends", then rejecting the hypothesis would be "it's equally-likely that the larger number of comments occur on weekends". Or more simply, that weekends would have a better opportunity of having more comments than weekdays.
 
 3. Of the four approaches, which do you think actually does a better job of getting an answer for the original question: 
    “are there a different number of Reddit comments posted on weekdays than on weekends?” 
    Briefly explain why. (It's not clear to me that there is a single correct answer to this question.)
-> 
+> I think the Mann-Whitney U test did, although it's still new to me but it seems to have done a good job. I think this because it doesn't require us to manipulate the data in anyway; we don't have to normalize it or groom it for testing. Rather, it can take non-normally distributed data (raw data) and make no assumptions when evaluating the data. 
 
 4. When are more Reddit comments posted in /r/canada, on average weekdays or weekends?
-> 
+> More reddit comments are posted on weekdays. 
