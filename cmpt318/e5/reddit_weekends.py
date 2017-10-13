@@ -47,14 +47,16 @@ def main():
     weekends = reddit[(reddit['date'].dt.weekday >= 5)] # 5 || 6 is a weekend
     weekdays = reddit[(reddit['date'].dt.weekday < 5)] # < 5 is a weekday
 
-    # Studen't T-test
+    # Student's T-test
     initial_weekends_normaltest = stats.normaltest(weekends['comment_count'])
     initial_weekdays_normaltest = stats.normaltest(weekdays['comment_count'])
     initial_levene = stats.levene(weekends['comment_count'], weekdays['comment_count'])
     initial_ttest = stats.ttest_ind(weekends['comment_count'], weekdays['comment_count'])
 
     # Fix 1: transforming data might save us.
+
     # Fix 2: the Central Limit Theorem might save us.
+    
     # Fix 3: a non-parametric test might save us.
 
     print(OUTPUT_TEMPLATE.format(

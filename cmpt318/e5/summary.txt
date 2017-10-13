@@ -13,6 +13,8 @@
 . . . Max: 27.3841526115
 * Correlation
 . . 0.950325695438
+* Description
+. There is a near linear relationship between X and Y, and Y has a std devation of 6 over a range of ~30 so it's data isn't too spread out.
 ----------------------------------
 ---Summary for file: data-2.csv---
 * X values
@@ -29,6 +31,8 @@
 . . . Max: 14.1473149923
 * Correlation
 . . 0.955153166575
+* Description
+. There is a near linear correlation between the two data sets; correlation is almost 1.
 ----------------------------------
 ---Summary for file: data-3.csv---
 * X values
@@ -45,6 +49,8 @@
 . . . Max: 10.5518710228
 * Correlation
 . . 0.981937264676
+* Description
+. There is an almost perfect linear correlation between the data sets, and the Y data set has less spread out data (std dev ~~ 1.2) compared to X (std dev ~~ 2.4)
 ----------------------------------
 ---Summary for file: data-4.csv---
 * X values
@@ -61,6 +67,8 @@
 . . . Max: 44.56504
 * Correlation
 . . -0.0811930673549
+* Description
+. There is little to no correlation between the data sets, even though from the data the X data set looks like it has similar data proportions to Y; the stats (mean, std dev, range) look like Y times 2.
 ----------------------------------
 ---Summary for file: data-5.csv---
 * X values
@@ -77,6 +85,8 @@
 . . . Max: 49.9341970363
 * Correlation
 . . -0.0882359898306
+* Description
+. There is little to no correlation between the data sets, and both x and y have large standard deviations compared to their ranges; the data is spread out.
 ----------------------------------
 ---Summary for file: data-6.csv---
 * X values
@@ -93,4 +103,6 @@
 . . . Max: 36.0798740308
 * Correlation
 . . 0.935068566209
+* Description
+. The data shares a near linear correlation, and have similar means, ranges, and standard deviations; the data sets are very simimlar.
 ----------------------------------
