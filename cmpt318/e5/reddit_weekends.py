@@ -78,8 +78,8 @@ def main():
     weekdays['year'] = weekends['date'].dt.year
 
     # Group by the values, and take the mean
-    mean_weekends = weekends.groupby(['week', 'year']).mean().reset_index()
-    mean_weekdays = weekdays.groupby(['week', 'year']).mean().reset_index()
+    mean_weekends = weekends.groupby(['week', 'year']).aggregate('mean').reset_index()
+    mean_weekdays = weekdays.groupby(['week', 'year']).aggregate('mean').reset_index()
     mean_weekends.drop('index', axis=1, inplace=True)
     mean_weekends.groupby(mean_weekends.week).sum()
     mean_weekdays.drop('index', axis=1, inplace=True)

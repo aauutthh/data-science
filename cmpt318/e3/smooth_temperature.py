@@ -52,6 +52,6 @@ plt.plot(data['timestamp'], lowess_smoothed[:, 1], 'r-', label="LOESS Smoothed")
 plt.title('CPU Temperature Fluctuations Smoothed with LOESS and Kalman Filtering')
 plt.xlabel('Time (Month-Day Hour)')
 plt.ylabel('Temperature (Celsius)')
-plt.legend();
+plt.legend()
 # plt.show()
 plt.savefig('cpu.svg')
