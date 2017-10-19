@@ -1,0 +1,15 @@
+CMPT318 - Exercise 6
+Alex Macdonald
+ID#301272281 
+October 20, 2017
+
+1. In the A/B test analysis, do you feel like we're p-hacking? 
+How comfortable are you coming to a conclusion at p<0.05p<0.05?
+
+2. If we had done T-tests between each pair of sorting implementation results, how many tests would we run? 
+If we looked for p<0.05p<0.05 in them, what would the probability be of having all conclusions correct, just by chance? 
+That's the effective p-value of the many-T-tests analysis. 
+[We could have done a Bonferroni correction when doing multiple T-tests, which is a fancy way of saying “for mm tests, look for significance at α/mα/m”.]
+
+3. Give a ranking of the sorting implementations by speed, including which ones could not be distinguished. 
+(i.e. which pairs could our experiment not conclude had different running times?)
