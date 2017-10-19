@@ -7,7 +7,6 @@
 # October 20, 2017
 
 import sys
-import gzip
 import numpy as np
 import pandas as pd
 from scipy import stats
@@ -18,7 +17,6 @@ OUTPUT_TEMPLATE = (
     '"Did more/less instructors use the search feature?" p-value: {more_instr_p:.3g}\n'
     '"Did instructors search more/less?" p-value: {more_instr_searches_p:.3g}'
 )
-
 
 def main():
     # Takes an input file on the command line ...
