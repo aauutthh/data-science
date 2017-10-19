@@ -1,0 +1,33 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+Counter	../implementations.py	/^from collections import Counter$/;"	kind:namespace	line:231
+OUTPUT_TEMPLATE	../ab_analysis_hint.py	/^OUTPUT_TEMPLATE = ($/;"	kind:variable	line:4
+TestSorts	../implementations.py	/^class TestSorts(unittest.TestCase):$/;"	kind:class	line:233
+_is_sorted	../implementations.py	/^    def _is_sorted(self, l):$/;"	kind:member	line:234
+_test_arr	../implementations.py	/^    def _test_arr(self, arr):$/;"	kind:member	line:248
+_test_impl	../implementations.py	/^    def _test_impl(self, sort, arr, orig_arr):$/;"	kind:member	line:238
+ab_analysis_hint.py	../ab_analysis_hint.py	1;"	kind:file	line:1
+all_implementations	../implementations.py	/^all_implementations = [qs1, qs2, qs3, qs4, qs5, merge1, partition_sort]$/;"	kind:variable	line:227
+builtin	../implementations.py	/^def builtin(arr):$/;"	kind:function	line:6
+implementations.py	../implementations.py	1;"	kind:file	line:1
+insertion	../implementations.py	/^def insertion(arr):$/;"	kind:function	line:212
+insertion_inplace	../implementations.py	/^def insertion_inplace(arr):$/;"	kind:function	line:218
+main	../ab_analysis_hint.py	/^def main():$/;"	kind:function	line:12
+merge1	../implementations.py	/^def merge1(arr):$/;"	kind:function	line:162
+np	../implementations.py	/^import numpy as np$/;"	kind:namespace	line:3
+partition_sort	../implementations.py	/^def partition_sort(arr):$/;"	kind:function	line:196
+qs1	../implementations.py	/^def qs1(arr):$/;"	kind:function	line:13
+qs2	../implementations.py	/^def qs2(arr):$/;"	kind:function	line:33
+qs3	../implementations.py	/^def qs3(arr):$/;"	kind:function	line:58
+qs4	../implementations.py	/^def qs4(arr):$/;"	kind:function	line:91
+qs5	../implementations.py	/^def qs5(arr):$/;"	kind:function	line:122
+qs_inplace	../implementations.py	/^    def qs_inplace(arr, st, en):$/;"	kind:function	line:126
+qs_inplace	../implementations.py	/^    def qs_inplace(arr, st, en):$/;"	kind:function	line:95
+sys	../ab_analysis_hint.py	/^import sys$/;"	kind:namespace	line:1
+test_helpers	../implementations.py	/^    def test_helpers(self):$/;"	kind:member	line:253
+test_implementations	../implementations.py	/^    def test_implementations(self):$/;"	kind:member	line:263
+unittest	../implementations.py	/^import unittest$/;"	kind:namespace	line:232
