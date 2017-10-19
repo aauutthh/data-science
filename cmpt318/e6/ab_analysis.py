@@ -60,8 +60,8 @@ def main():
     _, all_mannwhitney_p = stats.mannwhitneyu(odd_uid['search_count'], even_uid['search_count'])
 
     # Now, repeat the above but only using instructor data
-    inst_odd = odd_uid[odd_uid['is_instructor'] == True]
-    inst_even = even_uid[even_uid['is_instructor'] == True]
+    inst_odd = odd_uid[odd_uid['is_instructor']]
+    inst_even = even_uid[even_uid['is_instructor']]
     inst_odd_searched = inst_odd[inst_odd['search_count'] > 0]['uid'].count()
     inst_odd_not_searched = inst_odd[inst_odd['search_count'] == 0]['uid'].count()
     inst_even_searched = inst_even[inst_even['search_count'] > 0]['uid'].count()
