@@ -26,7 +26,7 @@ time_end = time.time() + 53
 global_results = []
 print('Creating data for analysis .. this will take ~53 seconds.')
 while time.time() < time_end:
-  random_array = np.random.randint(low=0, high=100000, size=10000, dtype=np.int)
+  random_array = np.random.randint(low=0, high=100000, size=100000, dtype=np.int)
   local_results = []
   for sort in all_implementations:
     st = time.time()
