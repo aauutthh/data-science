@@ -18,8 +18,6 @@ from statsmodels.stats.multicomp import pairwise_tukeyhsd
 # Will need a statistical test that can be used to determine if the means of
 # multiple samples are different - TUKEY
 
-# QUESTION - Can we assume that this is called data.csv, or do we take it as a cli?
-
 data = pd.read_csv('data.csv')
 
 # Code for post-hoc Tukey test borrowed from:
@@ -32,7 +30,13 @@ posthoc = pairwise_tukeyhsd(
 # It should print the information you used to answer queston 3
 print(posthoc)
 
-# QUESTION - If I used a chart, should I show it too?
+# I used the figure that is commentet out below to answer #3
+fig = posthoc.plot_simultaneous()
+plt.show()
 
-# fig = posthoc.plot_simultaneous()
-# plt.show()
+# Based on the above figure, I did some quick analysis to show the mean values
+# for the significantly different sorts, as determined by Tukey
+
+# TODO: Create a simple function that calculates the mean of each row and outputs them
+# only for those which are different from each other
+# QS1, Partition Sort, QS4/5, QS2/3, Mergesort
