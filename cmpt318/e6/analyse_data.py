@@ -9,28 +9,30 @@
 import numpy as np
 import pandas as pd
 from scipy import stats
+import matplotlib.pyplot as plt
+from statsmodels.stats.multicomp import pairwise_tukeyhsd
 
 # Reads the data.csv produced and does the relevant analysis
 # It should print the information used to answer question 3, but no specific format
 
 # Will need a statistical test that can be used to determine if the means of
-# multiple samples are different - TUKEY (& ANOVA)
+# multiple samples are different - TUKEY
 
 # QUESTION - Can we assume that this is called data.csv, or do we take it as a cli?
 
 data = pd.read_csv('data.csv')
 
-# Ideas and methodologies for the ANOVA and Tukey tests were borrowed from:
-# http://cleverowl.uk/2015/07/01/using-one-way-anova-and-tukeys-test-to-compare-data-sets/
+# Code for post-hoc Tukey test borrowed from:
+# http://www.cs.sfu.ca/~ggbaker/data-science/content/stats-tests.html
+melt = pd.melt(data)
+posthoc = pairwise_tukeyhsd(
+  melt['value'], melt['variable'],
+  alpha=0.05)
 
-f, p = stats.f_oneway(
-  data['qs1'],
-  data['qs2'],
-  data['qs3'],
-  data['qs4'],
-  data['qs5'],
-  data['merge1'],
-  data['partition_sort']
-)
-print(f)
-print(p)
+# It should print the information you used to answer queston 3
+print(posthoc)
+
+# QUESTION - If I used a chart, should I show it too?
+
+# fig = posthoc.plot_simultaneous()
+# plt.show()
