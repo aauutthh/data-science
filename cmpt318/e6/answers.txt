@@ -4,12 +4,73 @@ ID#301272281
 October 20, 2017
 
 1. In the A/B test analysis, do you feel like we're p-hacking? 
-How comfortable are you coming to a conclusion at p<0.05p<0.05?
+How comfortable are you coming to a conclusion at p<0.05p?
+
+> I do feel like we were p-hacking, and I don't feel comfortable with the conclusion at p<0.05. 
+> Our methods followed the description of p-value fishing found in [0], by changing the number of subjects until significance is achieved.
+> Here, we weren't satisfied with our results because we couldn't draw a conclusion we wanted, so we only sampled the instructors and only then did we get results we wanted.
+> This manipulating of results also changed our research question, from looking at all users that use the search bar, to only instructors. 
+
+[0] https://rationalwiki.org/wiki/Statistical_significance#P-value_fishing_or_.22p-hacking.22
 
 2. If we had done T-tests between each pair of sorting implementation results, how many tests would we run? 
-If we looked for p<0.05p<0.05 in them, what would the probability be of having all conclusions correct, just by chance? 
+If we looked for p<0.05 in them, what would the probability be of having all conclusions correct, just by chance? 
 That's the effective p-value of the many-T-tests analysis. 
 [We could have done a Bonferroni correction when doing multiple T-tests, which is a fancy way of saying “for mm tests, look for significance at α/mα/m”.]
 
+> We would have had to run 21 tests. (This is shown in the results of the Tukey output too, there are 21 comparisons)
+> The probability of them all having correct conclusions for p<0.05 is:
+> (1 - 0.05)^21
+> I got to this conclusion from reading [1]
+
+[1] https://www.stat.berkeley.edu/~mgoldman/Section0402.pdf
+
 3. Give a ranking of the sorting implementations by speed, including which ones could not be distinguished. 
 (i.e. which pairs could our experiment not conclude had different running times?)
+
+> From my results, the Tukey test determined that there was no difference between Quicksorts 2 & 3, and 4 & 5.
+> I also printed out the raw means so I could quickly compare them (and made a chart), so the order of speed from fastest to slowest was:
+1. Quicksort 1 
+2. Partition Sort
+3. Quicksort 4/5
+4. Quicksort 2/3
+5. Mergesort
+
+And here are the results I got from running analyse_data.py on the data.csv that was created by create_data.py on the sfu gateway.
+
+Here are the raw means for each search.
+Use with below Tukey test to infer results:
+qs1               0.104682
+partition_sort    0.170375
+qs5               0.183309
+qs4               0.185028
+qs3               0.197913
+qs2               0.198885
+merge1            0.229835
+dtype: float64
+      Multiple Comparison of Means - Tukey HSD,FWER=0.05     
+=============================================================
+    group1         group2     meandiff  lower   upper  reject
+-------------------------------------------------------------
+    merge1     partition_sort -0.0595  -0.0646 -0.0543  True 
+    merge1          qs1       -0.1252  -0.1303  -0.12   True 
+    merge1          qs2        -0.031  -0.0361 -0.0258  True 
+    merge1          qs3       -0.0319  -0.0371 -0.0268  True 
+    merge1          qs4       -0.0448  -0.0499 -0.0397  True 
+    merge1          qs5       -0.0465  -0.0517 -0.0414  True 
+partition_sort      qs1       -0.0657  -0.0708 -0.0606  True 
+partition_sort      qs2        0.0285   0.0234  0.0336  True 
+partition_sort      qs3        0.0275   0.0224  0.0327  True 
+partition_sort      qs4        0.0147   0.0095  0.0198  True 
+partition_sort      qs5        0.0129   0.0078  0.0181  True 
+     qs1            qs2        0.0942   0.0891  0.0993  True 
+     qs1            qs3        0.0932   0.0881  0.0984  True 
+     qs1            qs4        0.0803   0.0752  0.0855  True 
+     qs1            qs5        0.0786   0.0735  0.0838  True 
+     qs2            qs3        -0.001  -0.0061  0.0042 False 
+     qs2            qs4       -0.0139   -0.019 -0.0087  True 
+     qs2            qs5       -0.0156  -0.0207 -0.0104  True 
+     qs3            qs4       -0.0129   -0.018 -0.0077  True 
+     qs3            qs5       -0.0146  -0.0197 -0.0095  True 
+     qs4            qs5       -0.0017  -0.0069  0.0034 False 
+-------------------------------------------------------------
