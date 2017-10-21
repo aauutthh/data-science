@@ -1,0 +1,211 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+Counter	../e6/implementations.py	/^from collections import Counter$/;"	kind:namespace	line:231
+KalmanFilter	../e3/calc_distance.py	/^from pykalman import KalmanFilter$/;"	kind:namespace	line:10
+KalmanFilter	../e3/smooth_temperature.py	/^from pykalman import KalmanFilter$/;"	kind:namespace	line:10
+OUTPUT_TEMPLATE	../e5/reddit_weekends.py	/^OUTPUT_TEMPLATE = ($/;"	kind:variable	line:18
+OUTPUT_TEMPLATE	../e5/reddit_weekends_hint.py	/^OUTPUT_TEMPLATE = ($/;"	kind:variable	line:4
+OUTPUT_TEMPLATE	../e6/ab_analysis.py	/^OUTPUT_TEMPLATE = ($/;"	kind:variable	line:14
+OUTPUT_TEMPLATE	../e6/ab_analysis_hint.py	/^OUTPUT_TEMPLATE = ($/;"	kind:variable	line:4
+TestSorts	../e6/implementations.py	/^class TestSorts(unittest.TestCase):$/;"	kind:class	line:233
+_is_sorted	../e6/implementations.py	/^    def _is_sorted(self, l):$/;"	kind:member	line:234
+_test_arr	../e6/implementations.py	/^    def _test_arr(self, arr):$/;"	kind:member	line:248
+_test_impl	../e6/implementations.py	/^    def _test_impl(self, sort, arr, orig_arr):$/;"	kind:member	line:238
+ab_analysis.py	../e6/ab_analysis.py	1;"	kind:file	line:1
+ab_analysis_hint.py	../e6/ab_analysis_hint.py	1;"	kind:file	line:1
+all_implementations	../e6/create_data.py	/^from implementations import all_implementations$/;"	kind:namespace	line:12
+all_implementations	../e6/implementations.py	/^all_implementations = [qs1, qs2, qs3, qs4, qs5, merge1, partition_sort]$/;"	kind:variable	line:227
+alpha	../e6/analyse_data.py	/^  alpha=0.05)$/;"	kind:variable	line:28
+analyse_data.py	../e6/analyse_data.py	1;"	kind:file	line:1
+append_trkpt	../e3/calc_distance.py	/^    def append_trkpt(pt, trkseg, doc):$/;"	kind:function	line:90
+append_trkpt	../e3/calc_distance_hint.py	/^    def append_trkpt(pt, trkseg, doc):$/;"	kind:function	line:6
+average_ratings.py	../e4/average_ratings.py	1;"	kind:file	line:1
+avgCityPrecip	../e1/np_summary.py	/^avgCityPrecip = np.divide(cityTotals, cityCounts)$/;"	kind:variable	line:41
+avgCityPrecip	../e1/pd_summary.py	/^avgCityPrecip = cityTotals.div(cityCounts)$/;"	kind:variable	line:38
+avgMonthPrecip	../e1/np_summary.py	/^avgMonthPrecip = np.divide(monthlyTotals, monthlyCounts)$/;"	kind:variable	line:34
+avgMonthlyPrecip	../e1/pd_summary.py	/^avgMonthlyPrecip = monthlyTotals.div(monthlyCounts)$/;"	kind:variable	line:31
+best_tmax	../e4/temperature_correlation.py	/^def best_tmax(city, stations):$/;"	kind:function	line:78
+builtin	../e6/implementations.py	/^def builtin(arr):$/;"	kind:function	line:6
+calc_distance.py	../e3/calc_distance.py	1;"	kind:file	line:1
+calc_distance_hint.py	../e3/calc_distance_hint.py	1;"	kind:file	line:1
+cities	../e4/temperature_correlation.py	/^cities = cities[cities['area'] < 10000]$/;"	kind:variable	line:38
+cities	../e4/temperature_correlation.py	/^cities = cities[np.isfinite(cities['area'])]$/;"	kind:variable	line:32
+cities	../e4/temperature_correlation.py	/^cities = cities[np.isfinite(cities['population'])]$/;"	kind:variable	line:33
+cities	../e4/temperature_correlation.py	/^cities = pd.read_csv(city_data)$/;"	kind:variable	line:31
+cityCounts	../e1/np_summary.py	/^cityCounts = counts.sum(axis=1)$/;"	kind:variable	line:40
+cityCounts	../e1/pd_summary.py	/^cityCounts = counts.sum(axis=1)$/;"	kind:variable	line:37
+cityTotals	../e1/np_summary.py	/^cityTotals = totals.sum(axis=1)$/;"	kind:variable	line:24
+cityTotals	../e1/pd_summary.py	/^cityTotals = totals.sum(axis=1)$/;"	kind:variable	line:21
+city_data	../e4/temperature_correlation.py	/^city_data = sys.argv[2] # csv$/;"	kind:variable	line:16
+counts	../e1/np_summary.py	/^counts = data['counts']$/;"	kind:variable	line:19
+counts	../e1/pd_summary.py	/^counts = pd.read_csv('counts.csv').set_index(keys=['name'])$/;"	kind:variable	line:16
+create_data.py	../e6/create_data.py	1;"	kind:file	line:1
+create_plots.py	../e2/create_plots.py	1;"	kind:file	line:1
+data	../e1/np_summary.py	/^data = np.load('monthdata.npz')$/;"	kind:variable	line:17
+data	../e3/smooth_temperature.py	/^data = pd.read_table(file, sep=',', header=0)$/;"	kind:variable	line:22
+data	../e6/analyse_data.py	/^data = pd.read_csv('data.csv')$/;"	kind:variable	line:21
+data	../e6/create_data.py	/^data = pd.DataFrame(global_results, columns=['qs1', 'qs2', 'qs3', 'qs4', 'qs5', 'merge1', 'partition_sort'])$/;"	kind:variable	line:44
+data1	../e2/create_plots.py	/^data1 = pd.read_table(filename1, sep=' ', header=None, names=['lang', 'page', 'views', 'bytes'])$/;"	kind:variable	line:16
+data1Sorted	../e2/create_plots.py	/^data1Sorted = data1.sort_values('views', 0, ascending=False)$/;"	kind:variable	line:23
+data2	../e2/create_plots.py	/^data2 = pd.read_table(filename2, sep=' ', header=None, names=['lang', 'page', 'views', 'bytes'])$/;"	kind:variable	line:17
+date_to_month	../e1/monthly_totals.py	/^def date_to_month(d):$/;"	kind:function	line:17
+date_to_month	../e1/monthly_totals_hint.py	/^def date_to_month(d):$/;"	kind:function	line:9
+datetime	../e6/create_data.py	/^import datetime$/;"	kind:namespace	line:10
+df_ratings	../e4/average_ratings.py	/^df_ratings = df_ratings.groupby('title').aggregate('mean').round(2)$/;"	kind:variable	line:57
+df_ratings	../e4/average_ratings.py	/^df_ratings = df_ratings[df_ratings['title'].str.len() != 0]$/;"	kind:variable	line:54
+df_ratings	../e4/average_ratings.py	/^df_ratings = pd.DataFrame(ratings, columns=["all"])$/;"	kind:variable	line:31
+difflib	../e4/average_ratings.py	/^import difflib$/;"	kind:namespace	line:16
+distance	../e3/calc_distance.py	/^def distance(df):$/;"	kind:function	line:39
+distance	../e4/temperature_correlation.py	/^def distance(city, stations):$/;"	kind:function	line:66
+elapsed	../e6/create_data.py	/^    elapsed = en-st$/;"	kind:variable	line:39
+en	../e6/create_data.py	/^    en = time.time()$/;"	kind:variable	line:38
+fig	../e6/analyse_data.py	/^fig = posthoc.plot_simultaneous()$/;"	kind:variable	line:34
+file	../e3/smooth_temperature.py	/^file = sys.argv[1]$/;"	kind:variable	line:21
+filename1	../e2/create_plots.py	/^filename1 = sys.argv[1]$/;"	kind:variable	line:13
+filename2	../e2/create_plots.py	/^filename2 = sys.argv[2]$/;"	kind:variable	line:14
+frac	../e3/smooth_temperature.py	/^frac = 0.15 # looks like a pretty good value to choose$/;"	kind:variable	line:29
+getDOMImplementation	../e3/calc_distance.py	/^    from xml.dom.minidom import getDOMImplementation$/;"	kind:namespace	line:89
+getDOMImplementation	../e3/calc_distance_hint.py	/^    from xml.dom.minidom import getDOMImplementation$/;"	kind:namespace	line:5
+get_closest_movie_name	../e4/average_ratings.py	/^def get_closest_movie_name(t):$/;"	kind:function	line:47
+get_precip_data	../e1/monthly_totals.py	/^def get_precip_data():$/;"	kind:function	line:13
+get_precip_data	../e1/monthly_totals_hint.py	/^def get_precip_data():$/;"	kind:function	line:5
+global_results	../e6/create_data.py	/^global_results = []$/;"	kind:variable	line:25
+gzip	../e4/temperature_correlation.py	/^import gzip$/;"	kind:namespace	line:10
+gzip	../e5/reddit_weekends.py	/^import gzip$/;"	kind:namespace	line:12
+haversine	../e3/calc_distance.py	/^def haversine(lat1, long1, lat2, long2):$/;"	kind:function	line:49
+haversine	../e4/temperature_correlation.py	/^def haversine(lat1, long1, lat2, long2):$/;"	kind:function	line:57
+implementations.py	../e6/implementations.py	1;"	kind:file	line:1
+initial_state	../e3/smooth_temperature.py	/^initial_state = kalman_data.iloc[0]$/;"	kind:variable	line:34
+initial_state_mean	../e3/smooth_temperature.py	/^  initial_state_mean=initial_state$/;"	kind:variable	line:43
+insertion	../e6/implementations.py	/^def insertion(arr):$/;"	kind:function	line:212
+insertion_inplace	../e6/implementations.py	/^def insertion_inplace(arr):$/;"	kind:function	line:218
+kalman_data	../e3/smooth_temperature.py	/^kalman_data = data[['temperature', 'cpu_percent', 'sys_load_1']]$/;"	kind:variable	line:33
+kf	../e3/smooth_temperature.py	/^kf = KalmanFilter($/;"	kind:variable	line:39
+local_results	../e6/create_data.py	/^  local_results = []$/;"	kind:variable	line:34
+lowess_smoothed	../e3/smooth_temperature.py	/^lowess_smoothed = sm.nonparametric.lowess(data['temperature'].values, data['timestamp'].values, frac)$/;"	kind:variable	line:30
+lowestPrecip	../e1/np_summary.py	/^lowestPrecip = np.argmin(cityTotals)$/;"	kind:variable	line:25
+lowestPrecip	../e1/pd_summary.py	/^lowestPrecip = cityTotals.idxmin()$/;"	kind:variable	line:22
+main	../e1/monthly_totals.py	/^def main():$/;"	kind:function	line:104
+main	../e1/monthly_totals_hint.py	/^def main():$/;"	kind:function	line:78
+main	../e3/calc_distance.py	/^def main():$/;"	kind:function	line:108
+main	../e3/calc_distance_hint.py	/^def main():$/;"	kind:function	line:24
+main	../e5/reddit_weekends.py	/^def main():$/;"	kind:function	line:38
+main	../e5/reddit_weekends_hint.py	/^def main():$/;"	kind:function	line:17
+main	../e6/ab_analysis.py	/^def main():$/;"	kind:function	line:21
+main	../e6/ab_analysis_hint.py	/^def main():$/;"	kind:function	line:12
+matplotlib	../e2/create_plots.py	/^import matplotlib.pyplot as plt$/;"	kind:namespace	line:11
+matplotlib	../e3/smooth_temperature.py	/^import matplotlib.pyplot as plt$/;"	kind:namespace	line:14
+matplotlib	../e4/temperature_correlation.py	/^import matplotlib.pyplot as plt$/;"	kind:namespace	line:13
+matplotlib	../e6/analyse_data.py	/^import matplotlib.pyplot as plt$/;"	kind:namespace	line:12
+melt	../e6/analyse_data.py	/^melt = pd.melt(data)$/;"	kind:variable	line:25
+merge1	../e6/implementations.py	/^def merge1(arr):$/;"	kind:function	line:162
+merged	../e2/create_plots.py	/^merged = pd.merge(data1, data2, on=['page'])$/;"	kind:variable	line:50
+monthlyCounts	../e1/np_summary.py	/^monthlyCounts = counts.sum(axis=0)$/;"	kind:variable	line:33
+monthlyCounts	../e1/pd_summary.py	/^monthlyCounts = counts.sum(axis=0)$/;"	kind:variable	line:30
+monthlyTotals	../e1/np_summary.py	/^monthlyTotals = totals.sum(axis=0)$/;"	kind:variable	line:32
+monthlyTotals	../e1/pd_summary.py	/^monthlyTotals = totals.sum(axis=0)$/;"	kind:variable	line:29
+monthly_totals.py	../e1/monthly_totals.py	1;"	kind:file	line:1
+monthly_totals_hint.py	../e1/monthly_totals_hint.py	1;"	kind:file	line:1
+movie_list	../e4/average_ratings.py	/^movie_list = open(movie_titles).read().splitlines()$/;"	kind:variable	line:25
+movie_ratings	../e4/average_ratings.py	/^movie_ratings = sys.argv[2]$/;"	kind:variable	line:21
+movie_titles	../e4/average_ratings.py	/^movie_titles = sys.argv[1]$/;"	kind:variable	line:20
+n	../e1/np_summary.py	/^n = np.shape(totals)[0]$/;"	kind:variable	line:50
+np	../e1/monthly_totals.py	/^import numpy as np$/;"	kind:namespace	line:9
+np	../e1/monthly_totals_hint.py	/^import numpy as np$/;"	kind:namespace	line:1
+np	../e1/np_summary.py	/^import numpy as np$/;"	kind:namespace	line:15
+np	../e3/calc_distance.py	/^import numpy as np$/;"	kind:namespace	line:11
+np	../e3/smooth_temperature.py	/^import numpy as np$/;"	kind:namespace	line:11
+np	../e4/average_ratings.py	/^import numpy as np$/;"	kind:namespace	line:17
+np	../e4/temperature_correlation.py	/^import numpy as np$/;"	kind:namespace	line:11
+np	../e5/reddit_weekends.py	/^import numpy as np$/;"	kind:namespace	line:13
+np	../e6/ab_analysis.py	/^import numpy as np$/;"	kind:namespace	line:10
+np	../e6/analyse_data.py	/^import numpy as np$/;"	kind:namespace	line:9
+np	../e6/create_data.py	/^import numpy as np$/;"	kind:namespace	line:8
+np	../e6/implementations.py	/^import numpy as np$/;"	kind:namespace	line:3
+np_summary.py	../e1/np_summary.py	1;"	kind:file	line:1
+observation_covariance	../e3/smooth_temperature.py	/^  observation_covariance=observation_covariance,$/;"	kind:variable	line:42
+observation_covariance	../e3/smooth_temperature.py	/^observation_covariance = np.diag([1, 1, 1]) ** 2$/;"	kind:variable	line:36
+output_file	../e4/average_ratings.py	/^output_file = sys.argv[3]$/;"	kind:variable	line:22
+output_file	../e4/temperature_correlation.py	/^output_file = sys.argv[3] # svg$/;"	kind:variable	line:17
+output_gpx	../e3/calc_distance.py	/^def output_gpx(points, output_filename):$/;"	kind:function	line:85
+output_gpx	../e3/calc_distance_hint.py	/^def output_gpx(points, output_filename):$/;"	kind:function	line:1
+pairwise_tukeyhsd	../e6/analyse_data.py	/^from statsmodels.stats.multicomp import pairwise_tukeyhsd$/;"	kind:namespace	line:13
+parse	../e3/calc_distance.py	/^from xml.dom.minidom import parse, parseString$/;"	kind:namespace	line:13
+parseString	../e3/calc_distance.py	/^from xml.dom.minidom import parse, parseString$/;"	kind:namespace	line:13
+partition_sort	../e6/implementations.py	/^def partition_sort(arr):$/;"	kind:function	line:196
+pd	../e1/monthly_totals.py	/^import pandas as pd$/;"	kind:namespace	line:10
+pd	../e1/monthly_totals_hint.py	/^import pandas as pd$/;"	kind:namespace	line:2
+pd	../e1/pd_summary.py	/^import pandas as pd$/;"	kind:namespace	line:13
+pd	../e2/create_plots.py	/^import pandas as pd$/;"	kind:namespace	line:10
+pd	../e3/calc_distance.py	/^import pandas as pd$/;"	kind:namespace	line:12
+pd	../e3/smooth_temperature.py	/^import pandas as pd$/;"	kind:namespace	line:12
+pd	../e4/average_ratings.py	/^import pandas as pd$/;"	kind:namespace	line:18
+pd	../e4/temperature_correlation.py	/^import pandas as pd$/;"	kind:namespace	line:12
+pd	../e5/reddit_weekends.py	/^import pandas as pd$/;"	kind:namespace	line:14
+pd	../e6/ab_analysis.py	/^import pandas as pd$/;"	kind:namespace	line:11
+pd	../e6/analyse_data.py	/^import pandas as pd$/;"	kind:namespace	line:10
+pd	../e6/create_data.py	/^import pandas as pd$/;"	kind:namespace	line:9
+pd_summary.py	../e1/pd_summary.py	1;"	kind:file	line:1
+perform_tests	../e5/reddit_weekends.py	/^def perform_tests(weekends, weekdays):$/;"	kind:function	line:31
+pivot_months_loops	../e1/monthly_totals.py	/^def pivot_months_loops(data):$/;"	kind:function	line:49
+pivot_months_loops	../e1/monthly_totals_hint.py	/^def pivot_months_loops(data):$/;"	kind:function	line:23
+pivot_months_pandas	../e1/monthly_totals.py	/^def pivot_months_pandas(data):$/;"	kind:function	line:20
+pivot_months_pandas	../e1/monthly_totals_hint.py	/^def pivot_months_pandas(data):$/;"	kind:function	line:13
+plt	../e2/create_plots.py	/^import matplotlib.pyplot as plt$/;"	kind:namespace	line:11
+plt	../e3/smooth_temperature.py	/^import matplotlib.pyplot as plt$/;"	kind:namespace	line:14
+plt	../e4/temperature_correlation.py	/^import matplotlib.pyplot as plt$/;"	kind:namespace	line:13
+plt	../e6/analyse_data.py	/^import matplotlib.pyplot as plt$/;"	kind:namespace	line:12
+posthoc	../e6/analyse_data.py	/^posthoc = pairwise_tukeyhsd($/;"	kind:variable	line:26
+qs1	../e6/implementations.py	/^def qs1(arr):$/;"	kind:function	line:13
+qs2	../e6/implementations.py	/^def qs2(arr):$/;"	kind:function	line:33
+qs3	../e6/implementations.py	/^def qs3(arr):$/;"	kind:function	line:58
+qs4	../e6/implementations.py	/^def qs4(arr):$/;"	kind:function	line:91
+qs5	../e6/implementations.py	/^def qs5(arr):$/;"	kind:function	line:122
+qs_inplace	../e6/implementations.py	/^    def qs_inplace(arr, st, en):$/;"	kind:function	line:126
+qs_inplace	../e6/implementations.py	/^    def qs_inplace(arr, st, en):$/;"	kind:function	line:95
+quarterlyPrecipTotals	../e1/np_summary.py	/^quarterlyPrecipTotals = reshaped_sum.reshape(n, 4)$/;"	kind:variable	line:53
+random_array	../e6/create_data.py	/^  random_array = np.random.randint(low=0, high=10000, size=22500, dtype=np.int)$/;"	kind:variable	line:33
+ratings	../e4/average_ratings.py	/^ratings = open(movie_ratings).read().splitlines()$/;"	kind:variable	line:28
+read_gpx	../e3/calc_distance.py	/^def read_gpx(file):$/;"	kind:function	line:16
+reddit_weekends.py	../e5/reddit_weekends.py	1;"	kind:file	line:1
+reddit_weekends_hint.py	../e5/reddit_weekends_hint.py	1;"	kind:file	line:1
+res	../e6/create_data.py	/^    res = sort(random_array)$/;"	kind:variable	line:37
+reshaped	../e1/np_summary.py	/^reshaped = totals.reshape(4*n, 3)$/;"	kind:variable	line:51
+reshaped_sum	../e1/np_summary.py	/^reshaped_sum = reshaped.sum(axis=1)$/;"	kind:variable	line:52
+sm	../e3/smooth_temperature.py	/^import statsmodels.api as sm$/;"	kind:namespace	line:13
+smooth	../e3/calc_distance.py	/^def smooth(df):$/;"	kind:function	line:58
+smooth_temperature.py	../e3/smooth_temperature.py	1;"	kind:file	line:1
+st	../e6/create_data.py	/^    st = time.time()$/;"	kind:variable	line:36
+station_fh	../e4/temperature_correlation.py	/^station_fh = gzip.open(stations_filename, 'rt', encoding='utf-8')$/;"	kind:variable	line:20
+stations	../e4/temperature_correlation.py	/^stations = pd.read_json(station_fh, lines=True)$/;"	kind:variable	line:21
+stations_filename	../e4/temperature_correlation.py	/^stations_filename = sys.argv[1] # gziped json$/;"	kind:variable	line:15
+stats	../e5/reddit_weekends.py	/^from scipy import stats$/;"	kind:namespace	line:15
+stats	../e6/ab_analysis.py	/^from scipy import stats$/;"	kind:namespace	line:12
+stats	../e6/analyse_data.py	/^from scipy import stats$/;"	kind:namespace	line:11
+statsmodels	../e3/smooth_temperature.py	/^import statsmodels.api as sm$/;"	kind:namespace	line:13
+sys	../e2/create_plots.py	/^import sys$/;"	kind:namespace	line:9
+sys	../e3/calc_distance.py	/^import sys$/;"	kind:namespace	line:9
+sys	../e3/smooth_temperature.py	/^import sys$/;"	kind:namespace	line:9
+sys	../e4/average_ratings.py	/^import sys$/;"	kind:namespace	line:15
+sys	../e4/temperature_correlation.py	/^import sys$/;"	kind:namespace	line:9
+sys	../e5/reddit_weekends.py	/^import sys$/;"	kind:namespace	line:11
+sys	../e5/reddit_weekends_hint.py	/^import sys$/;"	kind:namespace	line:1
+sys	../e6/ab_analysis.py	/^import sys$/;"	kind:namespace	line:9
+sys	../e6/ab_analysis_hint.py	/^import sys$/;"	kind:namespace	line:1
+temperature_correlation.py	../e4/temperature_correlation.py	1;"	kind:file	line:1
+test_helpers	../e6/implementations.py	/^    def test_helpers(self):$/;"	kind:member	line:253
+test_implementations	../e6/implementations.py	/^    def test_implementations(self):$/;"	kind:member	line:263
+time	../e6/create_data.py	/^import time$/;"	kind:namespace	line:11
+time_end	../e6/create_data.py	/^time_end = time.time() + 57$/;"	kind:variable	line:24
+to_timestamp	../e3/smooth_temperature.py	/^def to_timestamp(datetime):$/;"	kind:function	line:17
+totals	../e1/np_summary.py	/^totals = data['totals']$/;"	kind:variable	line:18
+totals	../e1/pd_summary.py	/^totals = pd.read_csv('totals.csv').set_index(keys=['name'])$/;"	kind:variable	line:15
+transition_covariance	../e3/smooth_temperature.py	/^  transition_covariance=transition_covariance,$/;"	kind:variable	line:41
+transition_covariance	../e3/smooth_temperature.py	/^transition_covariance = np.diag([1, 1, 1]) ** 2$/;"	kind:variable	line:37
+transition_matrices	../e3/smooth_temperature.py	/^  transition_matrices=transition_matrix,$/;"	kind:variable	line:40
+transition_matrix	../e3/smooth_temperature.py	/^transition_matrix = [[1, 0, -0.27], [0, 0.85, -1.14], [0, 0.06, 0.37]]$/;"	kind:variable	line:38
+unittest	../e6/implementations.py	/^import unittest$/;"	kind:namespace	line:232
