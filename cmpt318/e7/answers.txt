@@ -4,5 +4,11 @@ ID#301272281
 October 27, 2017
 
 1. Looking at your dog-rates.ipynb, do you think the residual are close-enough to being normal to look at the OLS p-value? Can you reasonably conclude that the ratings are increasing?
+> I think so; the residual data from the histogram looks like a normal distribution, and should be normal enough for the p-value to hold. 
+> I can conclude that it is increasing; by piecing together all the evidence: the low p-value, the increasing regression line, and the normal distribution on the residual data point towards an increase in ratings.
 
 2. Do you think that the new “better” prediction is letting the Kalman filter do a better job capturing the true signal in the noise?
+
+> I think so; by adding in the co-efficients the slopes are less jagged and back-and-forth, and instead the slopes more smooth. 
+> As a result, it does a better job at describing the original signal without sporatic functions in the slope.
+> Additionally, it doesn't spike as high towards the end when there were few data points attributed to a high temperature, and the spike around 25% is better fitted around the data points.

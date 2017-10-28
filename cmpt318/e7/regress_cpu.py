@@ -11,6 +11,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import sys
 from pykalman import KalmanFilter
+from sklearn import linear_model
 
 columns = ['temperature', 'cpu_percent', 'fan_rpm', 'sys_load_1']
 training_data_file = sys.argv[1]
@@ -22,7 +23,14 @@ def get_data(filename):
     Read the given CSV file. Return (sysinfo DataFrame, array of X (input) values, array of y (known output) values).
     """
     sysinfo = pd.read_csv(filename, parse_dates=[0])
-    sysinfo['next_temp'] = 30  # TODO: fill in the to-be-predicted temperature
+    # Credit to ggbaker for providing the tip to use shift()
+    # from: http://pandas.pydata.org/pandas-docs/stable/generated/pandas.Series.shift.html
+    sysinfo['next_temp'] = sysinfo['temperature'].shift(1)
+
+    # Remove NaN as described in: 
+    # http://pandas.pydata.org/pandas-docs/version/0.17.0/generated/pandas.DataFrame.dropna.html
+    sysinfo.dropna(inplace=True)
+    # sysinfo['next_temp'] = 30  # TODO - DONE: fill in the to-be-predicted temperature
     return sysinfo, sysinfo[columns].values, sysinfo['next_temp'].values
 
 
@@ -34,8 +42,13 @@ def get_trained_coefficients():
     """
     _, X_train, y_train = get_data(training_data_file)
 
-    # TODO: create regression model and train.
-
+    # TODO - DONE: create regression model and train.
+    # Credit to ggbaker for the tip on using scikit-learn linear regression
+    # from: http://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LinearRegression.html
+    # and not to fit an intercept
+    model = linear_model.LinearRegression(fit_intercept=False)
+    model.fit(X_train, y_train)
+    coefficients = model.coef_
     return model, coefficients
 
 
@@ -71,9 +84,11 @@ def smooth_test(coef):
     initial = X_test[0]
     observation_covariance = np.diag([observation_stddev, 2, 10, 1]) ** 2
     transition_covariance = np.diag([transition_stddev, 80, 100, 10]) ** 2
-    transition = np.eye(dims) # transition = identity for all variables
-
+    
     # TODO: update transition to incorporate coef  # ... except temperature, which was the point of all this.
+    transition = np.eye(dims) # transition = identity for all variables
+    transition = transition * coef # Multiply the coefficients onto the indentity matrix ..
+    transition[0] = [1, 0, 0, 0] # .. but don't touch the temperature
 
     kf = KalmanFilter(
         initial_state_mean=initial,
