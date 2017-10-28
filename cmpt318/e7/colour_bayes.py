@@ -108,7 +108,7 @@ def main():
     # There's no built-in transformer that does colour space conversion,
     # instead use function rgb2lab in a FunctionTransformer
     # Can create a pipeline where the first step is a transformer, and the second is a Gaussian
-    pipeline = make_pipeline(FunctionTransformer(rgb_to_lab), GaussianNB())
+    # pipeline = make_pipeline(FunctionTransformer(rgb_to_lab), GaussianNB(priors=None))
     
     # Will need to do a little NumPy reshaping
     # Reshape the array of colours to an image 1 x n (.reshape(1, -1, 3))
@@ -116,9 +116,8 @@ def main():
     # Couldn't get the pipeline method to work as described in the exercise description
     # Instead, convert the X training data back to RGB and feed it to the rgb2lab function
     # Reshape back, and feed it into the gaussian model, continue as before.
-    # X_train = X_train * 255 # Convert back into RGB values
+    X_train = X_train * 255 # Convert back into RGB values
     X_re_train = X_train.reshape((1, -1, 3))
-    pipeline.fit(X_train.reshape(1, -1, 3), y)
     X_lab = rgb_to_lab(X_re_train) # Convert to LAB values
     model = GaussianNB(priors=None)
     model_lab = model.fit(X_lab, y_train)
