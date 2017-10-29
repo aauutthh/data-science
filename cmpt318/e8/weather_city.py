@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-# ab_analysis.py
+# weather_city.py
 # CMPT 318 Exercise 8 - Case of the Unlabelled Weather
 # Alex Macdonald
 # ID#301272281
