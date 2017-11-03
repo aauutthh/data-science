@@ -11,6 +11,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import sys
 
+from skimage.color import rgb2lab
 from skimage.color import lab2rgb
 from sklearn.naive_bayes import GaussianNB
 from sklearn.model_selection import train_test_split
@@ -85,7 +86,7 @@ def plot_predictions(model, lum=71, resolution=256):
     plt.imshow(pixels)
 
 def rgb_to_lab(rgb):
-  return lab2rgb(rgb.reshape((-1, 1, 3))).reshape(-1, 3)
+  return rgb2lab(rgb.reshape((1, -1, 3))).reshape(-1, 3)
 
 def main():
     data = pd.read_csv(sys.argv[1])
@@ -98,8 +99,8 @@ def main():
     bayes_lab_model = make_pipeline(FunctionTransformer(rgb_to_lab), GaussianNB())
     knn_rgb_model = KNeighborsClassifier(n_neighbors=5)
     knn_lab_model = make_pipeline(FunctionTransformer(rgb_to_lab), KNeighborsClassifier(n_neighbors=5))
-    svc_rgb_model = SVC(kernel='linear')
-    svc_lab_model = make_pipeline(FunctionTransformer(rgb_to_lab), SVC(kernel='linear'))
+    svc_rgb_model = SVC(kernel='linear', C=2.0)
+    svc_lab_model = make_pipeline(FunctionTransformer(rgb_to_lab), SVC(kernel='linear', C=2.0))
   
     # train each model and output image of predictions
     models = [bayes_rgb_model, bayes_lab_model, knn_rgb_model, knn_lab_model, svc_rgb_model, svc_lab_model]
