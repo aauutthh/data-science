@@ -15,3 +15,5 @@ November 3, 2017
 
 > I do think the mistakes are reasonable, for example, there's a lot of mistakes with Vancouver-Seattle and Ottawa-Toronto for example. These cities are in close proximety to each other, and have relatively similar climates, so it's difficult to distinguish between them when looking at precipitation and temperature.
 > Some weather features that could be added to make better predictions include: atmospheric pressure, humidity, and potentially wind speed. 
+
+Note: in weather_clusters.py, using 'tab10' as a colour map was causing my program to crash. To amend this, I used the gnuplot colourmap instead, so this should describe any graphical differences in my chart when evaluating it.

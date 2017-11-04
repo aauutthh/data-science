@@ -11,6 +11,8 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import sys
 
+from sklearn.cluster import KMeans
+from sklearn.decomposition import PCA
 from sklearn.pipeline import make_pipeline
 from sklearn.preprocessing import MinMaxScaler
 
@@ -20,7 +22,8 @@ def get_pca(X):
     Transform data to 2D points for plotting. Should return an array with shape (n, 2).
     """
     flatten_model = make_pipeline(
-        # TODO
+        MinMaxScaler(),
+        PCA(2)
     )
     X2 = flatten_model.fit_transform(X)
     assert X2.shape == (X.shape[0], 2)
@@ -32,7 +35,8 @@ def get_clusters(X):
     Find clusters of the weather data.
     """
     model = make_pipeline(
-        # TODO
+        MinMaxScaler(),
+        KMeans(n_clusters=10)
     )
     model.fit(X)
     return model.predict(X)
@@ -46,11 +50,12 @@ def main():
     X.drop(['city'], axis=1, inplace=True)
     X.drop(['year'], axis=1, inplace=True)
 
-    # X_train, X_test, y_train, y_test = train_test_split(X, y)
-
     X2 = get_pca(X)
     clusters = get_clusters(X)
-    plt.scatter(X2[:, 0], X2[:, 1], c=clusters, cmap='tab10', edgecolor='k', s=20)
+
+    # Note: None of the qualitative colourmaps were working on my machine
+    # So I used gnuplot just so the program wouldn't crash.
+    plt.scatter(X2[:, 0], X2[:, 1], c=clusters, cmap='gnuplot', edgecolor='k', s=20)
     plt.savefig('clusters.png')
 
     df = pd.DataFrame({
