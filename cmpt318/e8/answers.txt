@@ -5,10 +5,13 @@ November 3, 2017
 
 1. Which model did the best for the colour-prediction task? Can you give a theory about why?
 
-> 
+> The KNN had the best results, and more specifically, the LAB colour KNN had the best results overall.
+> Not only did both KNN create .png predictions that look accurate, but they had the highest scores (0.721 & 0.731 on my program run).
+> As for why, I think it is because of the data. The transition between colours can happen pretty rapidly, where a pixel is the difference between one colour and a different shade of the same colour for example. By looking at the nearest neighbours it's a good representation of what colour changes are occuring in the data, and leads to a good estimate for the data.
 
 2. Have a look at the cities in your test data where the weather model makes the wrong prediction. 
    Do you feel like the model is making reasonable mistakes? 
    Can you think of any weather features that we could potentially add to make better predictions?
 
-> 
+> I do think the mistakes are reasonable, for example, there's a lot of mistakes with Vancouver-Seattle and Ottawa-Toronto for example. These cities are in close proximety to each other, and have relatively similar climates, so it's difficult to distinguish between them when looking at precipitation and temperature.
+> Some weather features that could be added to make better predictions include: atmospheric pressure, humidity, and potentially wind speed. 

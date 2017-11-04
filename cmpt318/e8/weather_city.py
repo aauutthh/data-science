@@ -47,3 +47,6 @@ pd.Series(predictions).to_csv(sys.argv[3], index=False)
 
 # Program should print one line: the "score" of the model you're using on a testing subset of the labelled data
 print(model.score(X_test, y_test))
+
+# df = pd.DataFrame({'truth': y_test, 'prediction': model.predict(X_test)})
+# print(df[df['truth'] != df['prediction']])
