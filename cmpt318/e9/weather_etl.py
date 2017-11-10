@@ -12,7 +12,7 @@ from pyspark.sql import SparkSession, functions, types
 spark = SparkSession.builder.appName('weather ETL').getOrCreate()
 
 assert sys.version_info >= (3, 4) # make sure we have Python 3.4+
-assert spark.version >= '2.2' # make sure we have Spark 2.2+
+assert spark.version >= '2.1' # make sure we have Spark 2.1+, because 2.2 isn't in CSIL
 
 observation_schema = types.StructType([
     types.StructField('station', types.StringType(), False),
@@ -32,8 +32,11 @@ def main(in_directory, out_directory):
 
     # 2. Keep only the records we care about:
     # a. field qflag (quality flag) is null
+    weather.filter(weather.qflag.isNull()).collect()
     # b. the station starts with 'CA'
+    weather.filter(weather.station.startswith('^CA')).collect()
     # c. the observation is 'TMAX'
+    weather.filter("observation = 'TMAX'").collect()
 
     # 3. Divide the temperature by 10 so it's actually in C
 
