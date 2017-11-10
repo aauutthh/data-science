@@ -36,6 +36,7 @@ def main():
     groups = grouped.agg(
         functions.sum(with_bins['x']),
         # TODO: output the average y value. Hint: avg
+        functions.avg(with_bins['x']), # to make sure I've seen the code, here's an avg column
         functions.count('*'))
 
     # We know groups has <=10 rows, so it can safely be moved into two partitions.
