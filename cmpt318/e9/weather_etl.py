@@ -29,21 +29,18 @@ observation_schema = types.StructType([
 def main(in_directory, out_directory):
     # 1. Read the input directory of .csv.gz files
     weather = spark.read.csv(in_directory, schema=observation_schema)
-
     # 2. Keep only the records we care about:
     # a. field qflag (quality flag) is null
-    weather.filter(weather.qflag.isNull()).collect()
+    weather = weather.filter(weather.qflag.isNull())
     # b. the station starts with 'CA'
-    weather.filter(weather.station.startswith('^CA')).collect()
+    weather = weather.filter(weather.station.startswith('CA'))
     # c. the observation is 'TMAX'
-    weather.filter("observation = 'TMAX'").collect()
-
-    # 3. Divide the temperature by 10 so it's actually in C
-
+    weather = weather.filter("observation = 'TMAX'")
+    # 3. Divide the temperature by 10 so it's actually in C (do in the next step for simplicity)
     # 4. Keep only the columns station, date, and tmax (which is the value after dividing by 10)
-
+    cleaned_data = weather.select(weather['station'], weather['date'], (weather['value']/10).alias('tmax'))
     # 5. Write the result as a directory of JSON files GZIP compressed
-    # cleaned_data.write.json(out_directory, compression='gzip', mode='overwrite')
+    cleaned_data.write.json(out_directory, compression='gzip', mode='overwrite')
 
 
 if __name__=='__main__':
