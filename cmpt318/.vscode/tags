@@ -6,18 +6,35 @@
 !_TAG_PROGRAM_VERSION	5.8	//
 COLOUR_RGB	../e7/colour_bayes.py	/^COLOUR_RGB = {$/;"	kind:variable	line:22
 COLOUR_RGB	../e7/colour_bayes_hint.py	/^COLOUR_RGB = {$/;"	kind:variable	line:9
+COLOUR_RGB	../e8/colour_predict.py	/^COLOUR_RGB = {$/;"	kind:variable	line:31
+COLOUR_RGB	../e8/colour_predict_hint.py	/^COLOUR_RGB = {$/;"	kind:variable	line:16
 Counter	../e6/implementations.py	/^from collections import Counter$/;"	kind:namespace	line:231
 FunctionTransformer	../e7/colour_bayes.py	/^from sklearn.preprocessing import FunctionTransformer$/;"	kind:namespace	line:19
+FunctionTransformer	../e8/colour_predict.py	/^from sklearn.preprocessing import FunctionTransformer$/;"	kind:namespace	line:19
 GaussianNB	../e7/colour_bayes.py	/^from sklearn.naive_bayes import GaussianNB$/;"	kind:namespace	line:16
+GaussianNB	../e8/colour_predict.py	/^from sklearn.naive_bayes import GaussianNB$/;"	kind:namespace	line:16
+KMeans	../e8/weather_clusters.py	/^from sklearn.cluster import KMeans$/;"	kind:namespace	line:14
+KNeighborsClassifier	../e8/colour_predict.py	/^from sklearn.neighbors import KNeighborsClassifier$/;"	kind:namespace	line:20
 KalmanFilter	../e3/calc_distance.py	/^from pykalman import KalmanFilter$/;"	kind:namespace	line:10
 KalmanFilter	../e3/smooth_temperature.py	/^from pykalman import KalmanFilter$/;"	kind:namespace	line:10
 KalmanFilter	../e7/regress_cpu.py	/^from pykalman import KalmanFilter$/;"	kind:namespace	line:13
 KalmanFilter	../e7/regress_cpu_hint.py	/^from pykalman import KalmanFilter$/;"	kind:namespace	line:5
+MinMaxScaler	../e8/weather_clusters.py	/^from sklearn.preprocessing import MinMaxScaler$/;"	kind:namespace	line:17
+MinMaxScaler	../e8/weather_clusters_hint.py	/^from sklearn.preprocessing import MinMaxScaler$/;"	kind:namespace	line:7
 OUTPUT_TEMPLATE	../e5/reddit_weekends.py	/^OUTPUT_TEMPLATE = ($/;"	kind:variable	line:18
 OUTPUT_TEMPLATE	../e5/reddit_weekends_hint.py	/^OUTPUT_TEMPLATE = ($/;"	kind:variable	line:4
 OUTPUT_TEMPLATE	../e6/ab_analysis.py	/^OUTPUT_TEMPLATE = ($/;"	kind:variable	line:14
 OUTPUT_TEMPLATE	../e6/ab_analysis_hint.py	/^OUTPUT_TEMPLATE = ($/;"	kind:variable	line:4
+OUTPUT_TEMPLATE	../e8/colour_predict.py	/^OUTPUT_TEMPLATE = ($/;"	kind:variable	line:23
+OUTPUT_TEMPLATE	../e8/colour_predict_hint.py	/^OUTPUT_TEMPLATE = ($/;"	kind:variable	line:8
+PCA	../e8/weather_clusters.py	/^from sklearn.decomposition import PCA$/;"	kind:namespace	line:15
+SVC	../e8/colour_predict.py	/^from sklearn.svm import SVC$/;"	kind:namespace	line:21
+SVC	../e8/weather_city.py	/^from sklearn.svm import SVC$/;"	kind:namespace	line:20
+SparkSession	../e9/first_spark.py	/^from pyspark.sql import SparkSession, functions, types$/;"	kind:namespace	line:2
+SparkSession	../e9/weather_etl_hint.py	/^from pyspark.sql import SparkSession, functions, types$/;"	kind:namespace	line:2
+StandardScaler	../e8/weather_city.py	/^from sklearn.preprocessing import StandardScaler$/;"	kind:namespace	line:19
 TestSorts	../e6/implementations.py	/^class TestSorts(unittest.TestCase):$/;"	kind:class	line:233
+X	../e8/weather_city.py	/^X = labelled$/;"	kind:variable	line:26
 _is_sorted	../e6/implementations.py	/^    def _is_sorted(self, l):$/;"	kind:member	line:234
 _test_arr	../e6/implementations.py	/^    def _test_arr(self, arr):$/;"	kind:member	line:248
 _test_impl	../e6/implementations.py	/^    def _test_impl(self, sort, arr, orig_arr):$/;"	kind:member	line:238
@@ -51,7 +68,9 @@ city_data	../e4/temperature_correlation.py	/^city_data = sys.argv[2] # csv$/;"	k
 color	../e7/colour_bayes.py	/^import skimage.color$/;"	kind:namespace	line:13
 colour_bayes.py	../e7/colour_bayes.py	1;"	kind:file	line:1
 colour_bayes_hint.py	../e7/colour_bayes_hint.py	1;"	kind:file	line:1
-columns	../e7/regress_cpu.py	/^columns = ['temperature', 'cpu_percent', 'fan_rpm', 'sys_load_1']$/;"	kind:variable	line:15
+colour_predict.py	../e8/colour_predict.py	1;"	kind:file	line:1
+colour_predict_hint.py	../e8/colour_predict_hint.py	1;"	kind:file	line:1
+columns	../e7/regress_cpu.py	/^columns = ['temperature', 'cpu_percent', 'fan_rpm', 'sys_load_1']$/;"	kind:variable	line:16
 columns	../e7/regress_cpu_hint.py	/^columns = ['temperature', 'cpu_percent', 'fan_rpm', 'sys_load_1']$/;"	kind:variable	line:8
 counts	../e1/np_summary.py	/^counts = data['counts']$/;"	kind:variable	line:19
 counts	../e1/pd_summary.py	/^counts = pd.read_csv('counts.csv').set_index(keys=['name'])$/;"	kind:variable	line:16
@@ -78,15 +97,22 @@ en	../e6/create_data.py	/^    en = time.time()$/;"	kind:variable	line:38
 file	../e3/smooth_temperature.py	/^file = sys.argv[1]$/;"	kind:variable	line:21
 filename1	../e2/create_plots.py	/^filename1 = sys.argv[1]$/;"	kind:variable	line:13
 filename2	../e2/create_plots.py	/^filename2 = sys.argv[2]$/;"	kind:variable	line:14
+first_spark.py	../e9/first_spark.py	1;"	kind:file	line:1
 frac	../e3/smooth_temperature.py	/^frac = 0.15 # looks like a pretty good value to choose$/;"	kind:variable	line:29
+functions	../e9/first_spark.py	/^from pyspark.sql import SparkSession, functions, types$/;"	kind:namespace	line:2
+functions	../e9/weather_etl_hint.py	/^from pyspark.sql import SparkSession, functions, types$/;"	kind:namespace	line:2
 getDOMImplementation	../e3/calc_distance.py	/^    from xml.dom.minidom import getDOMImplementation$/;"	kind:namespace	line:89
 getDOMImplementation	../e3/calc_distance_hint.py	/^    from xml.dom.minidom import getDOMImplementation$/;"	kind:namespace	line:5
 get_closest_movie_name	../e4/average_ratings.py	/^def get_closest_movie_name(t):$/;"	kind:function	line:47
-get_data	../e7/regress_cpu.py	/^def get_data(filename):$/;"	kind:function	line:20
+get_clusters	../e8/weather_clusters.py	/^def get_clusters(X):$/;"	kind:function	line:33
+get_clusters	../e8/weather_clusters_hint.py	/^def get_clusters(X):$/;"	kind:function	line:22
+get_data	../e7/regress_cpu.py	/^def get_data(filename):$/;"	kind:function	line:21
 get_data	../e7/regress_cpu_hint.py	/^def get_data(filename):$/;"	kind:function	line:13
+get_pca	../e8/weather_clusters.py	/^def get_pca(X):$/;"	kind:function	line:20
+get_pca	../e8/weather_clusters_hint.py	/^def get_pca(X):$/;"	kind:function	line:10
 get_precip_data	../e1/monthly_totals.py	/^def get_precip_data():$/;"	kind:function	line:13
 get_precip_data	../e1/monthly_totals_hint.py	/^def get_precip_data():$/;"	kind:function	line:5
-get_trained_coefficients	../e7/regress_cpu.py	/^def get_trained_coefficients():$/;"	kind:function	line:29
+get_trained_coefficients	../e7/regress_cpu.py	/^def get_trained_coefficients():$/;"	kind:function	line:37
 get_trained_coefficients	../e7/regress_cpu_hint.py	/^def get_trained_coefficients():$/;"	kind:function	line:22
 global_results	../e6/create_data.py	/^global_results = []$/;"	kind:variable	line:25
 gzip	../e4/temperature_correlation.py	/^import gzip$/;"	kind:namespace	line:10
@@ -94,6 +120,7 @@ gzip	../e5/reddit_weekends.py	/^import gzip$/;"	kind:namespace	line:12
 haversine	../e3/calc_distance.py	/^def haversine(lat1, long1, lat2, long2):$/;"	kind:function	line:49
 haversine	../e4/temperature_correlation.py	/^def haversine(lat1, long1, lat2, long2):$/;"	kind:function	line:57
 implementations.py	../e6/implementations.py	1;"	kind:file	line:1
+in_directory	../e9/weather_etl_hint.py	/^    in_directory = sys.argv[1]$/;"	kind:variable	line:30
 initial_state	../e3/smooth_temperature.py	/^initial_state = kalman_data.iloc[0]$/;"	kind:variable	line:34
 initial_state_mean	../e3/smooth_temperature.py	/^  initial_state_mean=initial_state$/;"	kind:variable	line:43
 insertion	../e6/implementations.py	/^def insertion(arr):$/;"	kind:function	line:212
@@ -102,6 +129,10 @@ kalman_data	../e3/smooth_temperature.py	/^kalman_data = data[['temperature', 'cp
 kf	../e3/smooth_temperature.py	/^kf = KalmanFilter($/;"	kind:variable	line:39
 lab2rgb	../e7/colour_bayes.py	/^from skimage.color import lab2rgb$/;"	kind:namespace	line:12
 lab2rgb	../e7/colour_bayes_hint.py	/^from skimage.color import lab2rgb$/;"	kind:namespace	line:4
+lab2rgb	../e8/colour_predict.py	/^from skimage.color import lab2rgb$/;"	kind:namespace	line:15
+lab2rgb	../e8/colour_predict_hint.py	/^from skimage.color import lab2rgb$/;"	kind:namespace	line:4
+labelled	../e8/weather_city.py	/^labelled = pd.read_csv(sys.argv[1])$/;"	kind:variable	line:23
+linear_model	../e7/regress_cpu.py	/^from sklearn import linear_model$/;"	kind:namespace	line:14
 local_results	../e6/create_data.py	/^  local_results = []$/;"	kind:variable	line:34
 lowess_smoothed	../e3/smooth_temperature.py	/^lowess_smoothed = sm.nonparametric.lowess(data['temperature'].values, data['timestamp'].values, frac)$/;"	kind:variable	line:30
 lowestPrecip	../e1/np_summary.py	/^lowestPrecip = np.argmin(cityTotals)$/;"	kind:variable	line:25
@@ -116,9 +147,19 @@ main	../e6/ab_analysis.py	/^def main():$/;"	kind:function	line:21
 main	../e6/ab_analysis_hint.py	/^def main():$/;"	kind:function	line:12
 main	../e7/colour_bayes.py	/^def main():$/;"	kind:function	line:83
 main	../e7/colour_bayes_hint.py	/^def main():$/;"	kind:function	line:67
-main	../e7/regress_cpu.py	/^def main():$/;"	kind:function	line:93
+main	../e7/regress_cpu.py	/^def main():$/;"	kind:function	line:108
 main	../e7/regress_cpu_hint.py	/^def main():$/;"	kind:function	line:86
+main	../e8/colour_predict.py	/^def main():$/;"	kind:function	line:91
+main	../e8/colour_predict_hint.py	/^def main():$/;"	kind:function	line:74
+main	../e8/weather_clusters.py	/^def main():$/;"	kind:function	line:45
+main	../e8/weather_clusters_hint.py	/^def main():$/;"	kind:function	line:33
+main	../e9/first_spark.py	/^def main():$/;"	kind:function	line:18
+main	../e9/weather_etl_hint.py	/^def main(in_directory, out_directory):$/;"	kind:function	line:21
 make_pipeline	../e7/colour_bayes.py	/^from sklearn.pipeline import make_pipeline$/;"	kind:namespace	line:18
+make_pipeline	../e8/colour_predict.py	/^from sklearn.pipeline import make_pipeline$/;"	kind:namespace	line:18
+make_pipeline	../e8/weather_city.py	/^from sklearn.pipeline import make_pipeline$/;"	kind:namespace	line:18
+make_pipeline	../e8/weather_clusters.py	/^from sklearn.pipeline import make_pipeline$/;"	kind:namespace	line:16
+make_pipeline	../e8/weather_clusters_hint.py	/^from sklearn.pipeline import make_pipeline$/;"	kind:namespace	line:6
 matplotlib	../e2/create_plots.py	/^import matplotlib.pyplot as plt$/;"	kind:namespace	line:11
 matplotlib	../e3/smooth_temperature.py	/^import matplotlib.pyplot as plt$/;"	kind:namespace	line:14
 matplotlib	../e4/temperature_correlation.py	/^import matplotlib.pyplot as plt$/;"	kind:namespace	line:13
@@ -127,9 +168,15 @@ matplotlib	../e7/colour_bayes.py	/^import matplotlib.pyplot as plt$/;"	kind:name
 matplotlib	../e7/colour_bayes_hint.py	/^import matplotlib.pyplot as plt$/;"	kind:namespace	line:3
 matplotlib	../e7/regress_cpu.py	/^import matplotlib.pyplot as plt$/;"	kind:namespace	line:11
 matplotlib	../e7/regress_cpu_hint.py	/^import matplotlib.pyplot as plt$/;"	kind:namespace	line:3
+matplotlib	../e8/colour_predict.py	/^import matplotlib.pyplot as plt$/;"	kind:namespace	line:11
+matplotlib	../e8/colour_predict_hint.py	/^import matplotlib.pyplot as plt$/;"	kind:namespace	line:3
+matplotlib	../e8/weather_city.py	/^import matplotlib.pyplot as plt$/;"	kind:namespace	line:14
+matplotlib	../e8/weather_clusters.py	/^import matplotlib.pyplot as plt$/;"	kind:namespace	line:11
+matplotlib	../e8/weather_clusters_hint.py	/^import matplotlib.pyplot as plt$/;"	kind:namespace	line:3
 melt	../e6/analyse_data.py	/^melt = pd.melt(data)$/;"	kind:variable	line:32
 merge1	../e6/implementations.py	/^def merge1(arr):$/;"	kind:function	line:162
 merged	../e2/create_plots.py	/^merged = pd.merge(data1, data2, on=['page'])$/;"	kind:variable	line:50
+model	../e8/weather_city.py	/^model = make_pipeline($/;"	kind:variable	line:35
 monthlyCounts	../e1/np_summary.py	/^monthlyCounts = counts.sum(axis=0)$/;"	kind:variable	line:33
 monthlyCounts	../e1/pd_summary.py	/^monthlyCounts = counts.sum(axis=0)$/;"	kind:variable	line:30
 monthlyTotals	../e1/np_summary.py	/^monthlyTotals = totals.sum(axis=0)$/;"	kind:variable	line:32
@@ -142,6 +189,8 @@ movie_titles	../e4/average_ratings.py	/^movie_titles = sys.argv[1]$/;"	kind:vari
 n	../e1/np_summary.py	/^n = np.shape(totals)[0]$/;"	kind:variable	line:50
 name_to_rgb	../e7/colour_bayes.py	/^name_to_rgb = np.vectorize(COLOUR_RGB.get, otypes=[np.uint8, np.uint8, np.uint8])$/;"	kind:variable	line:35
 name_to_rgb	../e7/colour_bayes_hint.py	/^name_to_rgb = np.vectorize(COLOUR_RGB.get, otypes=[np.uint8, np.uint8, np.uint8])$/;"	kind:variable	line:22
+name_to_rgb	../e8/colour_predict.py	/^name_to_rgb = np.vectorize(COLOUR_RGB.get, otypes=[np.uint8, np.uint8, np.uint8])$/;"	kind:variable	line:44
+name_to_rgb	../e8/colour_predict_hint.py	/^name_to_rgb = np.vectorize(COLOUR_RGB.get, otypes=[np.uint8, np.uint8, np.uint8])$/;"	kind:variable	line:29
 np	../e1/monthly_totals.py	/^import numpy as np$/;"	kind:namespace	line:9
 np	../e1/monthly_totals_hint.py	/^import numpy as np$/;"	kind:namespace	line:1
 np	../e1/np_summary.py	/^import numpy as np$/;"	kind:namespace	line:15
@@ -158,14 +207,21 @@ np	../e7/colour_bayes.py	/^import numpy as np$/;"	kind:namespace	line:9
 np	../e7/colour_bayes_hint.py	/^import numpy as np$/;"	kind:namespace	line:1
 np	../e7/regress_cpu.py	/^import numpy as np$/;"	kind:namespace	line:9
 np	../e7/regress_cpu_hint.py	/^import numpy as np$/;"	kind:namespace	line:1
+np	../e8/colour_predict.py	/^import numpy as np$/;"	kind:namespace	line:9
+np	../e8/colour_predict_hint.py	/^import numpy as np$/;"	kind:namespace	line:1
+np	../e8/weather_city.py	/^import numpy as np$/;"	kind:namespace	line:12
+np	../e8/weather_clusters.py	/^import numpy as np$/;"	kind:namespace	line:9
+np	../e8/weather_clusters_hint.py	/^import numpy as np$/;"	kind:namespace	line:1
 np_summary.py	../e1/np_summary.py	1;"	kind:file	line:1
 observation_covariance	../e3/smooth_temperature.py	/^  observation_covariance=observation_covariance,$/;"	kind:variable	line:42
 observation_covariance	../e3/smooth_temperature.py	/^observation_covariance = np.diag([1, 1, 1]) ** 2$/;"	kind:variable	line:36
+observation_schema	../e9/weather_etl_hint.py	/^observation_schema = types.StructType([$/;"	kind:variable	line:9
+out_directory	../e9/weather_etl_hint.py	/^    out_directory = sys.argv[2]$/;"	kind:variable	line:31
 output_file	../e4/average_ratings.py	/^output_file = sys.argv[3]$/;"	kind:variable	line:22
 output_file	../e4/temperature_correlation.py	/^output_file = sys.argv[3] # svg$/;"	kind:variable	line:17
 output_gpx	../e3/calc_distance.py	/^def output_gpx(points, output_filename):$/;"	kind:function	line:85
 output_gpx	../e3/calc_distance_hint.py	/^def output_gpx(points, output_filename):$/;"	kind:function	line:1
-output_regression	../e7/regress_cpu.py	/^def output_regression(coefficients):$/;"	kind:function	line:42
+output_regression	../e7/regress_cpu.py	/^def output_regression(coefficients):$/;"	kind:function	line:55
 output_regression	../e7/regress_cpu_hint.py	/^def output_regression(coefficients):$/;"	kind:function	line:35
 pairwise_tukeyhsd	../e6/analyse_data.py	/^from statsmodels.stats.multicomp import pairwise_tukeyhsd$/;"	kind:namespace	line:13
 parse	../e3/calc_distance.py	/^from xml.dom.minidom import parse, parseString$/;"	kind:namespace	line:13
@@ -187,16 +243,23 @@ pd	../e7/colour_bayes.py	/^import pandas as pd$/;"	kind:namespace	line:10
 pd	../e7/colour_bayes_hint.py	/^import pandas as pd$/;"	kind:namespace	line:2
 pd	../e7/regress_cpu.py	/^import pandas as pd$/;"	kind:namespace	line:10
 pd	../e7/regress_cpu_hint.py	/^import pandas as pd$/;"	kind:namespace	line:2
+pd	../e8/colour_predict.py	/^import pandas as pd$/;"	kind:namespace	line:10
+pd	../e8/colour_predict_hint.py	/^import pandas as pd$/;"	kind:namespace	line:2
+pd	../e8/weather_city.py	/^import pandas as pd$/;"	kind:namespace	line:13
+pd	../e8/weather_clusters.py	/^import pandas as pd$/;"	kind:namespace	line:10
+pd	../e8/weather_clusters_hint.py	/^import pandas as pd$/;"	kind:namespace	line:2
 pd_summary.py	../e1/pd_summary.py	1;"	kind:file	line:1
 perform_tests	../e5/reddit_weekends.py	/^def perform_tests(weekends, weekdays):$/;"	kind:function	line:31
 pivot_months_loops	../e1/monthly_totals.py	/^def pivot_months_loops(data):$/;"	kind:function	line:49
 pivot_months_loops	../e1/monthly_totals_hint.py	/^def pivot_months_loops(data):$/;"	kind:function	line:23
 pivot_months_pandas	../e1/monthly_totals.py	/^def pivot_months_pandas(data):$/;"	kind:function	line:20
 pivot_months_pandas	../e1/monthly_totals_hint.py	/^def pivot_months_pandas(data):$/;"	kind:function	line:13
-plot_errors	../e7/regress_cpu.py	/^def plot_errors(model):$/;"	kind:function	line:50
+plot_errors	../e7/regress_cpu.py	/^def plot_errors(model):$/;"	kind:function	line:63
 plot_errors	../e7/regress_cpu_hint.py	/^def plot_errors(model):$/;"	kind:function	line:43
 plot_predictions	../e7/colour_bayes.py	/^def plot_predictions(model, lum=71, resolution=256):$/;"	kind:function	line:38
 plot_predictions	../e7/colour_bayes_hint.py	/^def plot_predictions(model, lum=71, resolution=256):$/;"	kind:function	line:25
+plot_predictions	../e8/colour_predict.py	/^def plot_predictions(model, lum=71, resolution=256):$/;"	kind:function	line:47
+plot_predictions	../e8/colour_predict_hint.py	/^def plot_predictions(model, lum=71, resolution=256):$/;"	kind:function	line:32
 plt	../e2/create_plots.py	/^import matplotlib.pyplot as plt$/;"	kind:namespace	line:11
 plt	../e3/smooth_temperature.py	/^import matplotlib.pyplot as plt$/;"	kind:namespace	line:14
 plt	../e4/temperature_correlation.py	/^import matplotlib.pyplot as plt$/;"	kind:namespace	line:13
@@ -205,7 +268,13 @@ plt	../e7/colour_bayes.py	/^import matplotlib.pyplot as plt$/;"	kind:namespace	l
 plt	../e7/colour_bayes_hint.py	/^import matplotlib.pyplot as plt$/;"	kind:namespace	line:3
 plt	../e7/regress_cpu.py	/^import matplotlib.pyplot as plt$/;"	kind:namespace	line:11
 plt	../e7/regress_cpu_hint.py	/^import matplotlib.pyplot as plt$/;"	kind:namespace	line:3
+plt	../e8/colour_predict.py	/^import matplotlib.pyplot as plt$/;"	kind:namespace	line:11
+plt	../e8/colour_predict_hint.py	/^import matplotlib.pyplot as plt$/;"	kind:namespace	line:3
+plt	../e8/weather_city.py	/^import matplotlib.pyplot as plt$/;"	kind:namespace	line:14
+plt	../e8/weather_clusters.py	/^import matplotlib.pyplot as plt$/;"	kind:namespace	line:11
+plt	../e8/weather_clusters_hint.py	/^import matplotlib.pyplot as plt$/;"	kind:namespace	line:3
 posthoc	../e6/analyse_data.py	/^posthoc = pairwise_tukeyhsd($/;"	kind:variable	line:33
+predictions	../e8/weather_city.py	/^predictions = model.predict(unlabelled)$/;"	kind:variable	line:43
 qs1	../e6/implementations.py	/^def qs1(arr):$/;"	kind:function	line:13
 qs2	../e6/implementations.py	/^def qs2(arr):$/;"	kind:function	line:33
 qs3	../e6/implementations.py	/^def qs3(arr):$/;"	kind:function	line:58
@@ -224,13 +293,18 @@ regress_cpu_hint.py	../e7/regress_cpu_hint.py	1;"	kind:file	line:1
 res	../e6/create_data.py	/^    res = sort(random_array)$/;"	kind:variable	line:37
 reshaped	../e1/np_summary.py	/^reshaped = totals.reshape(4*n, 3)$/;"	kind:variable	line:51
 reshaped_sum	../e1/np_summary.py	/^reshaped_sum = reshaped.sum(axis=1)$/;"	kind:variable	line:52
+rgb2lab	../e8/colour_predict.py	/^from skimage.color import rgb2lab$/;"	kind:namespace	line:14
 rgb_to_lab	../e7/colour_bayes.py	/^def rgb_to_lab(rgb):$/;"	kind:function	line:79
+rgb_to_lab	../e8/colour_predict.py	/^def rgb_to_lab(rgb):$/;"	kind:function	line:88
+schema	../e9/first_spark.py	/^schema = types.StructType([$/;"	kind:variable	line:10
 skimage	../e7/colour_bayes.py	/^import skimage.color$/;"	kind:namespace	line:13
 sm	../e3/smooth_temperature.py	/^import statsmodels.api as sm$/;"	kind:namespace	line:13
 smooth	../e3/calc_distance.py	/^def smooth(df):$/;"	kind:function	line:58
 smooth_temperature.py	../e3/smooth_temperature.py	1;"	kind:file	line:1
-smooth_test	../e7/regress_cpu.py	/^def smooth_test(coef):$/;"	kind:function	line:59
+smooth_test	../e7/regress_cpu.py	/^def smooth_test(coef):$/;"	kind:function	line:72
 smooth_test	../e7/regress_cpu_hint.py	/^def smooth_test(coef):$/;"	kind:function	line:52
+spark	../e9/first_spark.py	/^spark = SparkSession.builder.appName('first Spark app').getOrCreate()$/;"	kind:variable	line:4
+spark	../e9/weather_etl_hint.py	/^spark = SparkSession.builder.appName('weather ETL').getOrCreate()$/;"	kind:variable	line:4
 st	../e6/create_data.py	/^    st = time.time()$/;"	kind:variable	line:36
 station_fh	../e4/temperature_correlation.py	/^station_fh = gzip.open(stations_filename, 'rt', encoding='utf-8')$/;"	kind:variable	line:20
 stations	../e4/temperature_correlation.py	/^stations = pd.read_json(station_fh, lines=True)$/;"	kind:variable	line:21
@@ -252,10 +326,17 @@ sys	../e7/colour_bayes.py	/^import sys$/;"	kind:namespace	line:14
 sys	../e7/colour_bayes_hint.py	/^import sys$/;"	kind:namespace	line:5
 sys	../e7/regress_cpu.py	/^import sys$/;"	kind:namespace	line:12
 sys	../e7/regress_cpu_hint.py	/^import sys$/;"	kind:namespace	line:4
+sys	../e8/colour_predict.py	/^import sys$/;"	kind:namespace	line:12
+sys	../e8/colour_predict_hint.py	/^import sys$/;"	kind:namespace	line:5
+sys	../e8/weather_city.py	/^import sys$/;"	kind:namespace	line:15
+sys	../e8/weather_clusters.py	/^import sys$/;"	kind:namespace	line:12
+sys	../e8/weather_clusters_hint.py	/^import sys$/;"	kind:namespace	line:4
+sys	../e9/first_spark.py	/^import sys$/;"	kind:namespace	line:1
+sys	../e9/weather_etl_hint.py	/^import sys$/;"	kind:namespace	line:1
 temperature_correlation.py	../e4/temperature_correlation.py	1;"	kind:file	line:1
 test_helpers	../e6/implementations.py	/^    def test_helpers(self):$/;"	kind:member	line:253
 test_implementations	../e6/implementations.py	/^    def test_implementations(self):$/;"	kind:member	line:263
-testing_data_file	../e7/regress_cpu.py	/^testing_data_file = sys.argv[2]$/;"	kind:variable	line:17
+testing_data_file	../e7/regress_cpu.py	/^testing_data_file = sys.argv[2]$/;"	kind:variable	line:18
 testing_data_file	../e7/regress_cpu_hint.py	/^testing_data_file = sys.argv[2]$/;"	kind:variable	line:10
 time	../e6/create_data.py	/^import time$/;"	kind:namespace	line:11
 time_end	../e6/create_data.py	/^time_end = time.time() + 57$/;"	kind:variable	line:24
@@ -263,10 +344,20 @@ to_timestamp	../e3/smooth_temperature.py	/^def to_timestamp(datetime):$/;"	kind:
 totals	../e1/np_summary.py	/^totals = data['totals']$/;"	kind:variable	line:18
 totals	../e1/pd_summary.py	/^totals = pd.read_csv('totals.csv').set_index(keys=['name'])$/;"	kind:variable	line:15
 train_test_split	../e7/colour_bayes.py	/^from sklearn.model_selection import train_test_split$/;"	kind:namespace	line:15
-training_data_file	../e7/regress_cpu.py	/^training_data_file = sys.argv[1]$/;"	kind:variable	line:16
+train_test_split	../e8/colour_predict.py	/^from sklearn.model_selection import train_test_split$/;"	kind:namespace	line:17
+train_test_split	../e8/weather_city.py	/^from sklearn.model_selection import train_test_split$/;"	kind:namespace	line:17
+training_data_file	../e7/regress_cpu.py	/^training_data_file = sys.argv[1]$/;"	kind:variable	line:17
 training_data_file	../e7/regress_cpu_hint.py	/^training_data_file = sys.argv[1]$/;"	kind:variable	line:9
 transition_covariance	../e3/smooth_temperature.py	/^  transition_covariance=transition_covariance,$/;"	kind:variable	line:41
 transition_covariance	../e3/smooth_temperature.py	/^transition_covariance = np.diag([1, 1, 1]) ** 2$/;"	kind:variable	line:37
 transition_matrices	../e3/smooth_temperature.py	/^  transition_matrices=transition_matrix,$/;"	kind:variable	line:40
 transition_matrix	../e3/smooth_temperature.py	/^transition_matrix = [[1, 0, -0.27], [0, 0.85, -1.14], [0, 0.06, 0.37]]$/;"	kind:variable	line:38
+types	../e9/first_spark.py	/^from pyspark.sql import SparkSession, functions, types$/;"	kind:namespace	line:2
+types	../e9/weather_etl_hint.py	/^from pyspark.sql import SparkSession, functions, types$/;"	kind:namespace	line:2
 unittest	../e6/implementations.py	/^import unittest$/;"	kind:namespace	line:232
+unlabelled	../e8/weather_city.py	/^unlabelled = pd.read_csv(sys.argv[2])$/;"	kind:variable	line:24
+weather_city.py	../e8/weather_city.py	1;"	kind:file	line:1
+weather_clusters.py	../e8/weather_clusters.py	1;"	kind:file	line:1
+weather_clusters_hint.py	../e8/weather_clusters_hint.py	1;"	kind:file	line:1
+weather_etl_hint.py	../e9/weather_etl_hint.py	1;"	kind:file	line:1
+y	../e8/weather_city.py	/^y = labelled['city'].values$/;"	kind:variable	line:27
