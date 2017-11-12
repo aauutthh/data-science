@@ -28,3 +28,6 @@ November 17, 2017
 > By using .cache(), the program ran 11.1 seconds faster, so in this case cutting the costs of calculating the averages resulted in the best performance.
 
 3. Where did you use .cache() in your wikipedia_popular.py? [Hint: the answer had better be “once”… but where?]
+> I used it when reading in the data from csv and creating the dataframe.
+> I chose this spot because there are lots of operations being performed on the dataframe, having it cached means that subsequent operations on it will be less costly.
+
