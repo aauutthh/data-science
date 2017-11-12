@@ -3,8 +3,28 @@ Alex Macdonald
 ID#301272281 
 November 17, 2017
 
-1. How long did your reddit_averages.py take with (1) the reddit-0 data set and effectively no work, (2) no schema specified and not caching (on reddit-2 for this and the rest), (3) with a schema but not caching, (4) with both a schema and caching the twice-used DataFrame?
+1. How long did your reddit_averages.py take with: 
+(1) the reddit-0 data set and effectively no work, 
+> Result: 32.79user 0.82system 0:14.31elapsed 234%CPU 
+> The elapsed time was 14.31 seconds
+
+(2) no schema specified and not caching (on reddit-2 for this and the rest), 
+> Removed the schema=schema at line 46
+> Result: 55.21user 1.00system 0:28.90elapsed 194%CPU
+> The elapsed time was 28.9 seconds
+
+(3) with a schema but not caching, 
+> Kept the schema=schema; this is a vanilla run of reddit-2
+> Result: 43.80user 0.96system 0:21.85elapsed 204%CPU
+> The elapsed time was 21.85 seconds
+
+(4) with both a schema and caching the twice-used DataFrame?
+> Result: 38.00user 0.91system 0:17.80elapsed 218%CPU
+> The elapsed time was 17.8 seconds
 
 2. Based on the above, does it look like most of the time taken to process the reddit-2 data set is in reading the files, or calculating the averages?
+> As seen above, most of the time taken is due to calculating the averages.
+> By using schema=schema, the program ran 7.05 seconds faster.
+> By using .cache(), the program ran 11.1 seconds faster, so in this case cutting the costs of calculating the averages resulted in the best performance.
 
 3. Where did you use .cache() in your wikipedia_popular.py? [Hint: the answer had better be “once”… but where?]

@@ -47,13 +47,14 @@ def main(in_directory, out_directory):
 
     # Code modified from a StackOverflow post found at:
     # https://stackoverflow.com/questions/33882894/sparksql-apply-aggregate-functions-to-a-list-of-column/33907419
-    comments = comments.groupby('subreddit').avg()
+    averages = comments.groupby('subreddit').avg()
+    averages = averages.cache()
 
     # We want to produce the average scores sorted two ways:
     # 1. by subreddit name
-    averages_by_subreddit = comments.sort('subreddit')
+    averages_by_subreddit = averages.sort('subreddit')
     # 2. by score (highest scores first) = descending
-    averages_by_score = comments.sort(functions.desc('avg(score)'))
+    averages_by_score = averages.sort(functions.desc('avg(score)'))
 
     averages_by_subreddit.write.csv(out_directory + '-subreddit', mode='overwrite')
     averages_by_score.write.csv(out_directory + '-score', mode='overwrite')
