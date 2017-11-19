@@ -2,3 +2,13 @@ CMPT318 - Exercise 11
 Alex Macdonald
 ID#301272281 
 November 24, 2017
+
+1. In your reddit_relative.py, what intermediate results did you .cache()? 
+Briefly describe what would have happened if you hadn't used .cache() anywhere.
+(No need to time it, unless you really want to.)
+
+> 
+
+2. How did marking DataFrames for broadcast affect the running time of the “best author” program above?
+
+> 
