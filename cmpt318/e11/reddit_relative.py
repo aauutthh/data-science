@@ -11,8 +11,7 @@ from pyspark.sql import SparkSession, functions, types
 
 spark = SparkSession.builder.appName('reddit relative scores').getOrCreate()
 
-# TODO: UNCOMMENT THIS LINE WHEN FINISHED
-# assert sys.version_info >= (3, 4) # make sure we have Python 3.4+
+assert sys.version_info >= (3, 4) # make sure we have Python 3.4+
 assert spark.version >= '2.1' # make sure we have Spark 2.1+
 
 schema = types.StructType([ # commented-out fields won't be read
@@ -44,7 +43,7 @@ def main():
     in_directory = sys.argv[1]
     out_directory = sys.argv[2]
 
-    comments = spark.read.json(in_directory, schema=schema)
+    comments = spark.read.json(in_directory, schema=schema).cache()
 
     # Calculate the average for each subreddit, as before
     averages = comments.groupby('subreddit').agg(functions.avg('score').alias('average_score')).cache()

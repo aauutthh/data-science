@@ -11,4 +11,4 @@ Briefly describe what would have happened if you hadn't used .cache() anywhere.
 
 2. How did marking DataFrames for broadcast affect the running time of the “best author” program above?
 
-> 
+> TODO IN CSIL ON FRIDAY
