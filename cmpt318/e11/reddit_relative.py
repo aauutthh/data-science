@@ -53,22 +53,21 @@ def main():
     averages = averages.filter("average_score > 0")
 
     # Join the average score to the collection of all comments. Divide to get the relative score
-    joined = comments.join(averages, 'subreddit').cache()
-    joined = joined.withColumn('rel_score', joined.score/joined.average_score)
+    comments = comments.join(averages, 'subreddit')
+    comments = comments.withColumn('rel_score', comments.score/comments.average_score)
 
     # Determine the max relative score for each subreddit
-    max_relative_score = joined.groupby('subreddit').agg(functions.max('rel_score').alias('max_rel_score'))
+    max_relative_score = comments.groupby('subreddit').agg(functions.max('rel_score').alias('max_rel_score'))
 
     # Join again to get the best comment on each subreddit: we need this step to get the author
-    best_author = joined.join(max_relative_score, 'subreddit').cache()
+    comments = comments.join(max_relative_score, 'subreddit')
     
     # Filter so we only end up with the authors we want
-    best_author = best_author.filter("rel_score == max_rel_score")
+    comments = comments.filter("rel_score == max_rel_score")
     
     # Remove the now unimportant columns
-    best_author = best_author.drop('score')
-    best_author = best_author.drop('average_score')
-    best_author = best_author.drop('max_rel_score')
+    comments = comments.drop('score', 'average_score', 'max_rel_score')
+    best_author = comments.sort('subreddit')
     
     # Output the results
     best_author.write.json(out_directory, mode='overwrite')
