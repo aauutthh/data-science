@@ -72,9 +72,9 @@ def main():
     # https://stackoverflow.com/questions/33681487/how-do-i-add-a-new-column-to-a-spark-dataframe-using-pyspark
     data = data.withColumn('1', functions.lit(1))
     data = data.withColumn('xi', data.count_requests)
-    data = data.withColumn('xi^2', pow(data.count_requests, 2))  
+    data = data.withColumn('xi^2',data.count_requests**2)
     data = data.withColumn('yi', data.sum_request_bytes)
-    data = data.withColumn('yi^2', pow(data.sum_request_bytes, 2))
+    data = data.withColumn('yi^2', data.sum_request_bytes**2)
     data = data.withColumn('xiyi', data.count_requests * data.sum_request_bytes)
     data = data.drop("sum_request_bytes", "count_requests")
     # Idea to use empty groupby courtesy of ggbaker in the exercise notes
