@@ -7,8 +7,27 @@ November 24, 2017
 Briefly describe what would have happened if you hadn't used .cache() anywhere.
 (No need to time it, unless you really want to.)
 
-> 
+> I cached the averages and max_relative_score dataframes.
+> I chose these because they were intermediate dataframes that were used only to compute results then join back to the larger "comments" dataframe.
+> If I hadn't used cache, the dataframes would have been computed to calculate the intermediate df, the results would be thrown away, and then recalculated when I want to use them again.
+> As a result, I would be performing the calculations numerous times, and because this is a costly task it would have resulted in a longer runtime.
 
 2. How did marking DataFrames for broadcast affect the running time of the “best author” program above?
 
-> TODO IN CSIL ON FRIDAY
+> Without Broadcast (vanilla run): http://master.sfucloud.ca:8088/cluster/app/application_1506888802885_17726
+> Time (via the CLI time command):
+> real    0m52.124s
+> user    0m39.028s
+> sys     0m1.680s
+> Elapsed Time (via the front-end): 44 seconds
+
+> With Broadcast: http://master.sfucloud.ca:8088/cluster/app/application_1506888802885_17727
+> Time (via the CLI time command): 
+> real    0m47.550s
+> user    0m34.036s
+> sys     0m1.416s
+> Elapsed Time (via the front-end): 38 seconds
+
+> As expected, the use of broadcast resulted in a faster runtime for the programs execution
+> The results as seen on the front-end showed a 6 second decrease in runtime (13.6% speed increase)
+> The results as seen from the time command showed a 4.575 second decrease in runtime (8.8% speed increase)

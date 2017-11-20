@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 # reddit_averages.py
-# CMPT 318 Exercise 11 - Reddit Relative Scores
+# CMPT 318 Exercise 11 - Reddit Relative Scores w/broadcasting
 # Alex Macdonald
 # ID#301272281
 # November 24, 2017
@@ -9,7 +9,7 @@
 import sys
 from pyspark.sql import SparkSession, functions, types
 
-spark = SparkSession.builder.appName('reddit relative scores').getOrCreate()
+spark = SparkSession.builder.appName('reddit relative scores w/broadcasting').getOrCreate()
 
 assert sys.version_info >= (3, 4) # make sure we have Python 3.4+
 assert spark.version >= '2.1' # make sure we have Spark 2.1+
@@ -50,13 +50,16 @@ def main():
 
     # Exclude any subreddits with average score <= 0
     averages = averages.filter("average_score > 0")
+    averages = functions.broadcast(averages)
+    
 
     # Join the average score to the collection of all comments. Divide to get the relative score
     comments = comments.join(averages, 'subreddit')
     comments = comments.withColumn('rel_score', comments.score/comments.average_score)
 
     # Determine the max relative score for each subreddit
-    max_relative_score = comments.groupby('subreddit').agg(functions.max('rel_score').alias('max_rel_score')).cache()
+    max_relative_score = comments.groupby('subreddit').agg(functions.max('rel_score').alias('max_rel_score'))
+    max_relative_score = functions.broadcast(max_relative_score)
 
     # Join again to get the best comment on each subreddit: we need this step to get the author
     comments = comments.join(max_relative_score, 'subreddit')
