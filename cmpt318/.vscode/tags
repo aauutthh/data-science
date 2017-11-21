@@ -28,12 +28,22 @@ OUTPUT_TEMPLATE	../e06/ab_analysis_hint.py	/^OUTPUT_TEMPLATE = ($/;"	kind:variab
 OUTPUT_TEMPLATE	../e08/colour_predict.py	/^OUTPUT_TEMPLATE = ($/;"	kind:variable	line:23
 OUTPUT_TEMPLATE	../e08/colour_predict_hint.py	/^OUTPUT_TEMPLATE = ($/;"	kind:variable	line:8
 PCA	../e08/weather_clusters.py	/^from sklearn.decomposition import PCA$/;"	kind:namespace	line:15
+Row	../e11/correlate_logs.py	/^from pyspark.sql import SparkSession, functions, types, Row$/;"	kind:namespace	line:10
+Row	../e11/correlate_logs_hint.py	/^from pyspark.sql import SparkSession, functions, types, Row$/;"	kind:namespace	line:2
+Row	../e12/wordcount.py	/^from pyspark.sql import SparkSession, functions, types, Row$/;"	kind:namespace	line:10
 SVC	../e08/colour_predict.py	/^from sklearn.svm import SVC$/;"	kind:namespace	line:21
 SVC	../e08/weather_city.py	/^from sklearn.svm import SVC$/;"	kind:namespace	line:20
 SparkSession	../e09/first_spark.py	/^from pyspark.sql import SparkSession, functions, types$/;"	kind:namespace	line:2
 SparkSession	../e09/weather_etl.py	/^from pyspark.sql import SparkSession, functions, types$/;"	kind:namespace	line:10
 SparkSession	../e09/weather_etl_hint.py	/^from pyspark.sql import SparkSession, functions, types$/;"	kind:namespace	line:2
+SparkSession	../e10/reddit_averages.py	/^from pyspark.sql import SparkSession, functions, types$/;"	kind:namespace	line:12
 SparkSession	../e10/reddit_averages_hint.py	/^from pyspark.sql import SparkSession, functions, types$/;"	kind:namespace	line:2
+SparkSession	../e10/wikipedia_popular.py	/^from pyspark.sql import SparkSession, functions, types$/;"	kind:namespace	line:10
+SparkSession	../e11/correlate_logs.py	/^from pyspark.sql import SparkSession, functions, types, Row$/;"	kind:namespace	line:10
+SparkSession	../e11/correlate_logs_hint.py	/^from pyspark.sql import SparkSession, functions, types, Row$/;"	kind:namespace	line:2
+SparkSession	../e11/reddit_relative.py	/^from pyspark.sql import SparkSession, functions, types$/;"	kind:namespace	line:10
+SparkSession	../e11/reddit_relative_hint.py	/^from pyspark.sql import SparkSession, functions, types$/;"	kind:namespace	line:2
+SparkSession	../e12/wordcount.py	/^from pyspark.sql import SparkSession, functions, types, Row$/;"	kind:namespace	line:10
 StandardScaler	../e08/weather_city.py	/^from sklearn.preprocessing import StandardScaler$/;"	kind:namespace	line:19
 TestSorts	../e06/implementations.py	/^class TestSorts(unittest.TestCase):$/;"	kind:class	line:233
 X	../e08/weather_city.py	/^X = labelled$/;"	kind:variable	line:26
@@ -74,10 +84,14 @@ colour_predict.py	../e08/colour_predict.py	1;"	kind:file	line:1
 colour_predict_hint.py	../e08/colour_predict_hint.py	1;"	kind:file	line:1
 columns	../e07/regress_cpu.py	/^columns = ['temperature', 'cpu_percent', 'fan_rpm', 'sys_load_1']$/;"	kind:variable	line:16
 columns	../e07/regress_cpu_hint.py	/^columns = ['temperature', 'cpu_percent', 'fan_rpm', 'sys_load_1']$/;"	kind:variable	line:8
+correlate_logs.py	../e11/correlate_logs.py	1;"	kind:file	line:1
+correlate_logs_hint.py	../e11/correlate_logs_hint.py	1;"	kind:file	line:1
 counts	../e01/np_summary.py	/^counts = data['counts']$/;"	kind:variable	line:19
 counts	../e01/pd_summary.py	/^counts = pd.read_csv('counts.csv').set_index(keys=['name'])$/;"	kind:variable	line:16
 create_data.py	../e06/create_data.py	1;"	kind:file	line:1
 create_plots.py	../e02/create_plots.py	1;"	kind:file	line:1
+create_row_rdd	../e11/correlate_logs.py	/^def create_row_rdd(in_directory):$/;"	kind:function	line:40
+create_row_rdd	../e11/correlate_logs_hint.py	/^def create_row_rdd(in_directory):$/;"	kind:function	line:30
 data	../e01/np_summary.py	/^data = np.load('monthdata.npz')$/;"	kind:variable	line:17
 data	../e03/smooth_temperature.py	/^data = pd.read_table(file, sep=',', header=0)$/;"	kind:variable	line:22
 data	../e06/analyse_data.py	/^data = pd.read_csv('data.csv')$/;"	kind:variable	line:21
@@ -104,7 +118,14 @@ frac	../e03/smooth_temperature.py	/^frac = 0.15 # looks like a pretty good value
 functions	../e09/first_spark.py	/^from pyspark.sql import SparkSession, functions, types$/;"	kind:namespace	line:2
 functions	../e09/weather_etl.py	/^from pyspark.sql import SparkSession, functions, types$/;"	kind:namespace	line:10
 functions	../e09/weather_etl_hint.py	/^from pyspark.sql import SparkSession, functions, types$/;"	kind:namespace	line:2
+functions	../e10/reddit_averages.py	/^from pyspark.sql import SparkSession, functions, types$/;"	kind:namespace	line:12
 functions	../e10/reddit_averages_hint.py	/^from pyspark.sql import SparkSession, functions, types$/;"	kind:namespace	line:2
+functions	../e10/wikipedia_popular.py	/^from pyspark.sql import SparkSession, functions, types$/;"	kind:namespace	line:10
+functions	../e11/correlate_logs.py	/^from pyspark.sql import SparkSession, functions, types, Row$/;"	kind:namespace	line:10
+functions	../e11/correlate_logs_hint.py	/^from pyspark.sql import SparkSession, functions, types, Row$/;"	kind:namespace	line:2
+functions	../e11/reddit_relative.py	/^from pyspark.sql import SparkSession, functions, types$/;"	kind:namespace	line:10
+functions	../e11/reddit_relative_hint.py	/^from pyspark.sql import SparkSession, functions, types$/;"	kind:namespace	line:2
+functions	../e12/wordcount.py	/^from pyspark.sql import SparkSession, functions, types, Row$/;"	kind:namespace	line:10
 getDOMImplementation	../e03/calc_distance.py	/^    from xml.dom.minidom import getDOMImplementation$/;"	kind:namespace	line:89
 getDOMImplementation	../e03/calc_distance_hint.py	/^    from xml.dom.minidom import getDOMImplementation$/;"	kind:namespace	line:5
 get_closest_movie_name	../e04/average_ratings.py	/^def get_closest_movie_name(t):$/;"	kind:function	line:47
@@ -112,6 +133,7 @@ get_clusters	../e08/weather_clusters.py	/^def get_clusters(X):$/;"	kind:function
 get_clusters	../e08/weather_clusters_hint.py	/^def get_clusters(X):$/;"	kind:function	line:22
 get_data	../e07/regress_cpu.py	/^def get_data(filename):$/;"	kind:function	line:21
 get_data	../e07/regress_cpu_hint.py	/^def get_data(filename):$/;"	kind:function	line:13
+get_filename_from_path	../e10/wikipedia_popular.py	/^def get_filename_from_path(path):$/;"	kind:function	line:23
 get_pca	../e08/weather_clusters.py	/^def get_pca(X):$/;"	kind:function	line:20
 get_pca	../e08/weather_clusters_hint.py	/^def get_pca(X):$/;"	kind:function	line:10
 get_precip_data	../e01/monthly_totals.py	/^def get_precip_data():$/;"	kind:function	line:13
@@ -126,7 +148,9 @@ haversine	../e04/temperature_correlation.py	/^def haversine(lat1, long1, lat2, l
 implementations.py	../e06/implementations.py	1;"	kind:file	line:1
 in_directory	../e09/weather_etl.py	/^    in_directory = sys.argv[1]$/;"	kind:variable	line:47
 in_directory	../e09/weather_etl_hint.py	/^    in_directory = sys.argv[1]$/;"	kind:variable	line:30
+in_directory	../e10/reddit_averages.py	/^    in_directory = sys.argv[1]$/;"	kind:variable	line:64
 in_directory	../e10/reddit_averages_hint.py	/^    in_directory = sys.argv[1]$/;"	kind:variable	line:45
+in_directory	../e10/wikipedia_popular.py	/^    in_directory = sys.argv[1]$/;"	kind:variable	line:69
 initial_state	../e03/smooth_temperature.py	/^initial_state = kalman_data.iloc[0]$/;"	kind:variable	line:34
 initial_state_mean	../e03/smooth_temperature.py	/^  initial_state_mean=initial_state$/;"	kind:variable	line:43
 insertion	../e06/implementations.py	/^def insertion(arr):$/;"	kind:function	line:212
@@ -138,6 +162,10 @@ lab2rgb	../e07/colour_bayes_hint.py	/^from skimage.color import lab2rgb$/;"	kind
 lab2rgb	../e08/colour_predict.py	/^from skimage.color import lab2rgb$/;"	kind:namespace	line:15
 lab2rgb	../e08/colour_predict_hint.py	/^from skimage.color import lab2rgb$/;"	kind:namespace	line:4
 labelled	../e08/weather_city.py	/^labelled = pd.read_csv(sys.argv[1])$/;"	kind:variable	line:23
+line_re	../e11/correlate_logs.py	/^line_re = re.compile("^(\\\\S+) - - \\\\[\\\\S+ [+-]\\\\d+\\\\] \\"[A-Z]+ \\\\S+ HTTP\/\\\\d\\\\.\\\\d\\" \\\\d+ (\\\\d+)$")$/;"	kind:variable	line:19
+line_re	../e11/correlate_logs_hint.py	/^line_re = re.compile("^(\\\\S+) - - \\\\[\\\\S+ [+-]\\\\d+\\\\] \\"[A-Z]+ \\\\S+ HTTP\/\\\\d\\\\.\\\\d\\" \\\\d+ (\\\\d+)$")$/;"	kind:variable	line:10
+line_to_row	../e11/correlate_logs.py	/^def line_to_row(line):$/;"	kind:function	line:22
+line_to_row	../e11/correlate_logs_hint.py	/^def line_to_row(line):$/;"	kind:function	line:13
 linear_model	../e07/regress_cpu.py	/^from sklearn import linear_model$/;"	kind:namespace	line:14
 local_results	../e06/create_data.py	/^  local_results = []$/;"	kind:variable	line:34
 lowess_smoothed	../e03/smooth_temperature.py	/^lowess_smoothed = sm.nonparametric.lowess(data['temperature'].values, data['timestamp'].values, frac)$/;"	kind:variable	line:30
@@ -162,7 +190,13 @@ main	../e08/weather_clusters_hint.py	/^def main():$/;"	kind:function	line:33
 main	../e09/first_spark.py	/^def main():$/;"	kind:function	line:18
 main	../e09/weather_etl.py	/^def main(in_directory, out_directory):$/;"	kind:function	line:29
 main	../e09/weather_etl_hint.py	/^def main(in_directory, out_directory):$/;"	kind:function	line:21
+main	../e10/reddit_averages.py	/^def main(in_directory, out_directory):$/;"	kind:function	line:45
 main	../e10/reddit_averages_hint.py	/^def main(in_directory, out_directory):$/;"	kind:function	line:35
+main	../e10/wikipedia_popular.py	/^def main(in_directory, out_directory):$/;"	kind:function	line:28
+main	../e11/correlate_logs.py	/^def main():$/;"	kind:function	line:48
+main	../e11/correlate_logs_hint.py	/^def main():$/;"	kind:function	line:35
+main	../e11/reddit_relative.py	/^def main():$/;"	kind:function	line:42
+main	../e11/reddit_relative_hint.py	/^def main():$/;"	kind:function	line:34
 make_pipeline	../e07/colour_bayes.py	/^from sklearn.pipeline import make_pipeline$/;"	kind:namespace	line:18
 make_pipeline	../e08/colour_predict.py	/^from sklearn.pipeline import make_pipeline$/;"	kind:namespace	line:18
 make_pipeline	../e08/weather_city.py	/^from sklearn.pipeline import make_pipeline$/;"	kind:namespace	line:18
@@ -199,6 +233,8 @@ name_to_rgb	../e07/colour_bayes.py	/^name_to_rgb = np.vectorize(COLOUR_RGB.get, 
 name_to_rgb	../e07/colour_bayes_hint.py	/^name_to_rgb = np.vectorize(COLOUR_RGB.get, otypes=[np.uint8, np.uint8, np.uint8])$/;"	kind:variable	line:22
 name_to_rgb	../e08/colour_predict.py	/^name_to_rgb = np.vectorize(COLOUR_RGB.get, otypes=[np.uint8, np.uint8, np.uint8])$/;"	kind:variable	line:44
 name_to_rgb	../e08/colour_predict_hint.py	/^name_to_rgb = np.vectorize(COLOUR_RGB.get, otypes=[np.uint8, np.uint8, np.uint8])$/;"	kind:variable	line:29
+not_none	../e11/correlate_logs.py	/^def not_none(row):$/;"	kind:function	line:32
+not_none	../e11/correlate_logs_hint.py	/^def not_none(row):$/;"	kind:function	line:23
 np	../e01/monthly_totals.py	/^import numpy as np$/;"	kind:namespace	line:9
 np	../e01/monthly_totals_hint.py	/^import numpy as np$/;"	kind:namespace	line:1
 np	../e01/np_summary.py	/^import numpy as np$/;"	kind:namespace	line:15
@@ -227,7 +263,9 @@ observation_schema	../e09/weather_etl.py	/^observation_schema = types.StructType
 observation_schema	../e09/weather_etl_hint.py	/^observation_schema = types.StructType([$/;"	kind:variable	line:9
 out_directory	../e09/weather_etl.py	/^    out_directory = sys.argv[2]$/;"	kind:variable	line:48
 out_directory	../e09/weather_etl_hint.py	/^    out_directory = sys.argv[2]$/;"	kind:variable	line:31
+out_directory	../e10/reddit_averages.py	/^    out_directory = sys.argv[2]$/;"	kind:variable	line:65
 out_directory	../e10/reddit_averages_hint.py	/^    out_directory = sys.argv[2]$/;"	kind:variable	line:46
+out_directory	../e10/wikipedia_popular.py	/^    out_directory = sys.argv[2]$/;"	kind:variable	line:70
 output_file	../e04/average_ratings.py	/^output_file = sys.argv[3]$/;"	kind:variable	line:22
 output_file	../e04/temperature_correlation.py	/^output_file = sys.argv[3] # svg$/;"	kind:variable	line:17
 output_gpx	../e03/calc_distance.py	/^def output_gpx(points, output_filename):$/;"	kind:function	line:85
@@ -296,9 +334,14 @@ qs_inplace	../e06/implementations.py	/^    def qs_inplace(arr, st, en):$/;"	kind
 quarterlyPrecipTotals	../e01/np_summary.py	/^quarterlyPrecipTotals = reshaped_sum.reshape(n, 4)$/;"	kind:variable	line:53
 random_array	../e06/create_data.py	/^  random_array = np.random.randint(low=0, high=10000, size=22500, dtype=np.int)$/;"	kind:variable	line:33
 ratings	../e04/average_ratings.py	/^ratings = open(movie_ratings).read().splitlines()$/;"	kind:variable	line:28
+re	../e11/correlate_logs.py	/^import re$/;"	kind:namespace	line:11
+re	../e11/correlate_logs_hint.py	/^import re$/;"	kind:namespace	line:3
+re	../e12/wordcount.py	/^import string, re/;"	kind:namespace	line:11
 read_gpx	../e03/calc_distance.py	/^def read_gpx(file):$/;"	kind:function	line:16
 reddit_averages.py	../e10/reddit_averages.py	1;"	kind:file	line:1
 reddit_averages_hint.py	../e10/reddit_averages_hint.py	1;"	kind:file	line:1
+reddit_relative.py	../e11/reddit_relative.py	1;"	kind:file	line:1
+reddit_relative_hint.py	../e11/reddit_relative_hint.py	1;"	kind:file	line:1
 reddit_weekends.py	../e05/reddit_weekends.py	1;"	kind:file	line:1
 reddit_weekends_hint.py	../e05/reddit_weekends_hint.py	1;"	kind:file	line:1
 regress_cpu.py	../e07/regress_cpu.py	1;"	kind:file	line:1
@@ -310,7 +353,11 @@ rgb2lab	../e08/colour_predict.py	/^from skimage.color import rgb2lab$/;"	kind:na
 rgb_to_lab	../e07/colour_bayes.py	/^def rgb_to_lab(rgb):$/;"	kind:function	line:79
 rgb_to_lab	../e08/colour_predict.py	/^def rgb_to_lab(rgb):$/;"	kind:function	line:88
 schema	../e09/first_spark.py	/^schema = types.StructType([$/;"	kind:variable	line:10
+schema	../e10/reddit_averages.py	/^schema = types.StructType([ # commented-out fields won't be read$/;"	kind:variable	line:20
 schema	../e10/reddit_averages_hint.py	/^schema = types.StructType([ # commented-out fields won't be read$/;"	kind:variable	line:10
+schema	../e10/wikipedia_popular.py	/^schema = types.StructType([$/;"	kind:variable	line:17
+schema	../e11/reddit_relative.py	/^schema = types.StructType([ # commented-out fields won't be read$/;"	kind:variable	line:17
+schema	../e11/reddit_relative_hint.py	/^schema = types.StructType([ # commented-out fields won't be read$/;"	kind:variable	line:9
 skimage	../e07/colour_bayes.py	/^import skimage.color$/;"	kind:namespace	line:13
 sm	../e03/smooth_temperature.py	/^import statsmodels.api as sm$/;"	kind:namespace	line:13
 smooth	../e03/calc_distance.py	/^def smooth(df):$/;"	kind:function	line:58
@@ -320,7 +367,13 @@ smooth_test	../e07/regress_cpu_hint.py	/^def smooth_test(coef):$/;"	kind:functio
 spark	../e09/first_spark.py	/^spark = SparkSession.builder.appName('first Spark app').getOrCreate()$/;"	kind:variable	line:4
 spark	../e09/weather_etl.py	/^spark = SparkSession.builder.appName('weather ETL').getOrCreate()$/;"	kind:variable	line:12
 spark	../e09/weather_etl_hint.py	/^spark = SparkSession.builder.appName('weather ETL').getOrCreate()$/;"	kind:variable	line:4
+spark	../e10/reddit_averages.py	/^spark = SparkSession.builder.appName('reddit averages').getOrCreate()$/;"	kind:variable	line:14
 spark	../e10/reddit_averages_hint.py	/^spark = SparkSession.builder.appName('reddit averages').getOrCreate()$/;"	kind:variable	line:4
+spark	../e10/wikipedia_popular.py	/^spark = SparkSession.builder.appName('popular wikipedia pages').getOrCreate()$/;"	kind:variable	line:12
+spark	../e11/correlate_logs.py	/^spark = SparkSession.builder.appName('correlate logs').getOrCreate()$/;"	kind:variable	line:13
+spark	../e11/correlate_logs_hint.py	/^spark = SparkSession.builder.appName('correlate logs').getOrCreate()$/;"	kind:variable	line:5
+spark	../e11/reddit_relative.py	/^spark = SparkSession.builder.appName('reddit relative scores').getOrCreate()$/;"	kind:variable	line:12
+spark	../e11/reddit_relative_hint.py	/^spark = SparkSession.builder.appName('reddit relative scores').getOrCreate()$/;"	kind:variable	line:4
 st	../e06/create_data.py	/^    st = time.time()$/;"	kind:variable	line:36
 station_fh	../e04/temperature_correlation.py	/^station_fh = gzip.open(stations_filename, 'rt', encoding='utf-8')$/;"	kind:variable	line:20
 stations	../e04/temperature_correlation.py	/^stations = pd.read_json(station_fh, lines=True)$/;"	kind:variable	line:21
@@ -329,6 +382,7 @@ stats	../e05/reddit_weekends.py	/^from scipy import stats$/;"	kind:namespace	lin
 stats	../e06/ab_analysis.py	/^from scipy import stats$/;"	kind:namespace	line:12
 stats	../e06/analyse_data.py	/^from scipy import stats$/;"	kind:namespace	line:11
 statsmodels	../e03/smooth_temperature.py	/^import statsmodels.api as sm$/;"	kind:namespace	line:13
+string	../e12/wordcount.py	/^import string, re/;"	kind:namespace	line:11
 sys	../e02/create_plots.py	/^import sys$/;"	kind:namespace	line:9
 sys	../e03/calc_distance.py	/^import sys$/;"	kind:namespace	line:9
 sys	../e03/smooth_temperature.py	/^import sys$/;"	kind:namespace	line:9
@@ -350,7 +404,14 @@ sys	../e08/weather_clusters_hint.py	/^import sys$/;"	kind:namespace	line:4
 sys	../e09/first_spark.py	/^import sys$/;"	kind:namespace	line:1
 sys	../e09/weather_etl.py	/^import sys$/;"	kind:namespace	line:9
 sys	../e09/weather_etl_hint.py	/^import sys$/;"	kind:namespace	line:1
+sys	../e10/reddit_averages.py	/^import sys$/;"	kind:namespace	line:11
 sys	../e10/reddit_averages_hint.py	/^import sys$/;"	kind:namespace	line:1
+sys	../e10/wikipedia_popular.py	/^import sys$/;"	kind:namespace	line:9
+sys	../e11/correlate_logs.py	/^import sys$/;"	kind:namespace	line:9
+sys	../e11/correlate_logs_hint.py	/^import sys$/;"	kind:namespace	line:1
+sys	../e11/reddit_relative.py	/^import sys$/;"	kind:namespace	line:9
+sys	../e11/reddit_relative_hint.py	/^import sys$/;"	kind:namespace	line:1
+sys	../e12/wordcount.py	/^import sys$/;"	kind:namespace	line:9
 temperature_correlation.py	../e04/temperature_correlation.py	1;"	kind:file	line:1
 test_helpers	../e06/implementations.py	/^    def test_helpers(self):$/;"	kind:member	line:253
 test_implementations	../e06/implementations.py	/^    def test_implementations(self):$/;"	kind:member	line:263
@@ -373,7 +434,14 @@ transition_matrix	../e03/smooth_temperature.py	/^transition_matrix = [[1, 0, -0.
 types	../e09/first_spark.py	/^from pyspark.sql import SparkSession, functions, types$/;"	kind:namespace	line:2
 types	../e09/weather_etl.py	/^from pyspark.sql import SparkSession, functions, types$/;"	kind:namespace	line:10
 types	../e09/weather_etl_hint.py	/^from pyspark.sql import SparkSession, functions, types$/;"	kind:namespace	line:2
+types	../e10/reddit_averages.py	/^from pyspark.sql import SparkSession, functions, types$/;"	kind:namespace	line:12
 types	../e10/reddit_averages_hint.py	/^from pyspark.sql import SparkSession, functions, types$/;"	kind:namespace	line:2
+types	../e10/wikipedia_popular.py	/^from pyspark.sql import SparkSession, functions, types$/;"	kind:namespace	line:10
+types	../e11/correlate_logs.py	/^from pyspark.sql import SparkSession, functions, types, Row$/;"	kind:namespace	line:10
+types	../e11/correlate_logs_hint.py	/^from pyspark.sql import SparkSession, functions, types, Row$/;"	kind:namespace	line:2
+types	../e11/reddit_relative.py	/^from pyspark.sql import SparkSession, functions, types$/;"	kind:namespace	line:10
+types	../e11/reddit_relative_hint.py	/^from pyspark.sql import SparkSession, functions, types$/;"	kind:namespace	line:2
+types	../e12/wordcount.py	/^from pyspark.sql import SparkSession, functions, types, Row$/;"	kind:namespace	line:10
 unittest	../e06/implementations.py	/^import unittest$/;"	kind:namespace	line:232
 unlabelled	../e08/weather_city.py	/^unlabelled = pd.read_csv(sys.argv[2])$/;"	kind:variable	line:24
 weather_city.py	../e08/weather_city.py	1;"	kind:file	line:1
@@ -381,4 +449,6 @@ weather_clusters.py	../e08/weather_clusters.py	1;"	kind:file	line:1
 weather_clusters_hint.py	../e08/weather_clusters_hint.py	1;"	kind:file	line:1
 weather_etl.py	../e09/weather_etl.py	1;"	kind:file	line:1
 weather_etl_hint.py	../e09/weather_etl_hint.py	1;"	kind:file	line:1
+wikipedia_popular.py	../e10/wikipedia_popular.py	1;"	kind:file	line:1
+wordcount.py	../e12/wordcount.py	1;"	kind:file	line:1
 y	../e08/weather_city.py	/^y = labelled['city'].values$/;"	kind:variable	line:27
